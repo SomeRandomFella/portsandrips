@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity WebGL Player | Cuphead</title>
+    <base href="http://127.0.0.1:5500/" />
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="/TemplateData/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <style>
+      #custom-loader {
+        position: fixed;
+        inset: 0;
+        background: #0a0a0a;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        color: #fff;
+      }
+      #custom-loader h1 {
+        font-size: 3em;
+        color: #cc0000;
+        text-shadow: 2px 2px 0px #000;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+      }
+      #custom-loader .subtitle {
+        font-size: 1.1em;
+        color: #888;
+        margin-bottom: 40px;
+      }
+      .load-section {
+        width: 500px;
+        max-width: 90vw;
+        margin-bottom: 24px;
+      }
+      .load-section .label {
+        font-size: 1em;
+        color: #aaa;
+        margin-bottom: 6px;
+      }
+      .load-section .label span {
+        color: #666;
+        font-size: 0.85em;
+      }
+      .bar-bg {
+        width: 100%;
+        height: 28px;
+        background: #111;
+        border: 2px solid #333;
+        border-radius: 4px;
+        overflow: hidden;
+      }
+      .bar-fill {
+        height: 100%;
+        width: 0%;
+        background: #cc0000;
+        transition: width 0.2s ease;
+      }
+      #status-text {
+        font-size: 1em;
+        color: #555;
+        margin-top: 20px;
+        min-height: 1.5em;
+        text-align: center;
+      }
+      #error-text {
+        color: #cc0000;
+        font-size: 0.95em;
+        margin-top: 10px;
+        text-align: center;
+        max-width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Custom loading overlay -->
+    <div id="custom-loader">
+      <h1>Cuphead</h1>
+      <div class="subtitle">getting the good stuff.. SFOOLS FOREVER</div>
+
+      <div class="load-section">
+        <div class="label">
+          Cuphead.wasm <span id="wasm-detail">(0 / 2 parts)</span>
+        </div>
+        <div class="bar-bg"><div class="bar-fill" id="wasm-bar"></div></div>
+      </div>
+
+      <div class="load-section">
+        <div class="label">
+          Cuphead.data <span id="data-detail">(0 / 65 parts)</span>
+        </div>
+        <div class="bar-bg"><div class="bar-fill" id="data-bar"></div></div>
+      </div>
+
+      <div id="status-text">Preparing to load...</div>
+      <div id="error-text"></div>
+    </div>
+
+    <div id="unity-container" style="display: none">
+      <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+      <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+          <div id="unity-progress-bar-full"></div>
+        </div>
+      </div>
+      <div id="unity-warning"></div>
+    </div>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+    </script>
+    <script>
+      window.addEventListener("load", function () {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker.register("ServiceWorker.js");
+        }
+      });
+
+      var container = document.querySelector("#unity-container");
+      var canvas = document.querySelector("#unity-canvas");
+      var loadingBar = document.querySelector("#unity-loading-bar");
+      var progressBarFull = document.querySelector("#unity-progress-bar-full");
+      var warningBanner = document.querySelector("#unity-warning");
+
+      function unityShowBanner(msg, type) {
+        function updateBannerVisibility() {
+          warningBanner.style.display = warningBanner.children.length
+            ? "block"
+            : "none";
+        }
+        var div = document.createElement("div");
+        div.innerHTML = msg;
+        warningBanner.appendChild(div);
+        if (type == "error") div.style = "background: red; padding: 10px;";
+        else {
+          if (type == "warning")
+            div.style = "background: yellow; padding: 10px;";
+          setTimeout(function () {
+            warningBanner.removeChild(div);
+            updateBannerVisibility();
+          }, 5000);
+        }
+        updateBannerVisibility();
+      }
+
+      var buildUrl = "Build";
+
+      async function fetchParts(baseName, numParts, barId, detailId) {
+        const bar = document.getElementById(barId);
+        const detail = document.getElementById(detailId);
+        const chunks = [];
+
+        for (let i = 1; i <= numParts; i++) {
+          const url = `${buildUrl}/${baseName}.part${i}`;
+          detail.textContent = `(${i - 1} / ${numParts} parts)`;
+          const resp = await fetch(url);
+          if (!resp.ok)
+            throw new Error(
+              `Failed to fetch ${url}: ${resp.status} ${resp.statusText}`,
+            );
+          const buf = await resp.arrayBuffer();
+          chunks.push(buf);
+          bar.style.width = (i / numParts) * 100 + "%";
+          detail.textContent = `(${i} / ${numParts} parts)`;
+        }
+
+        const total = chunks.reduce((s, c) => s + c.byteLength, 0);
+        const combined = new Uint8Array(total);
+        let offset = 0;
+        for (const chunk of chunks) {
+          combined.set(new Uint8Array(chunk), offset);
+          offset += chunk.byteLength;
+        }
+        return combined.buffer;
+      }
+
+      async function loadAndStart() {
+        const statusText = document.getElementById("status-text");
+        const errorText = document.getElementById("error-text");
+
+        try {
+          statusText.textContent = "Loading Cuphead.wasm parts...";
+          const wasmBuffer = await fetchParts(
+            "Cuphead.wasm",
+            2,
+            "wasm-bar",
+            "wasm-detail",
+          );
+
+          statusText.textContent = "Loading Cuphead.data parts...";
+          const dataBuffer = await fetchParts(
+            "Cuphead.data",
+            65,
+            "data-bar",
+            "data-detail",
+          );
+
+          statusText.textContent = "All parts loaded! Starting game...";
+
+          const wasmBlob = new Blob([wasmBuffer], { type: "application/wasm" });
+          const dataBlob = new Blob([dataBuffer], {
+            type: "application/octet-stream",
+          });
+          const wasmUrl = URL.createObjectURL(wasmBlob);
+          const dataUrl = URL.createObjectURL(dataBlob);
+
+          document.getElementById("custom-loader").style.display = "none";
+          container.style.display = "";
+          loadingBar.style.display = "block";
+
+          var loaderUrl = buildUrl + "/Cuphead.loader.js";
+          var config = {
+            dataUrl: dataUrl,
+            frameworkUrl: buildUrl + "/Cuphead.framework.js",
+            codeUrl: wasmUrl,
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "AstraaXD",
+            productName: "Cuphead",
+            productVersion: "1.0",
+            showBanner: unityShowBanner,
+          };
+
+          if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+            var meta = document.createElement("meta");
+            meta.name = "viewport";
+            meta.content =
+              "width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes";
+            document.getElementsByTagName("head")[0].appendChild(meta);
+          }
+
+          var script = document.createElement("script");
+          script.src = loaderUrl;
+          script.onload = () => {
+            createUnityInstance(canvas, config, (progress) => {
+              progressBarFull.style.width = 100 * progress + "%";
+            })
+              .then((unityInstance) => {
+                loadingBar.style.display = "none";
+                URL.revokeObjectURL(wasmUrl);
+                URL.revokeObjectURL(dataUrl);
+              })
+              .catch((message) => {
+                alert(message);
+              });
+          };
+          document.body.appendChild(script);
+        } catch (err) {
+          statusText.textContent = "Failed to load files!";
+          errorText.textContent = "Error: " + err.message;
+          console.error(err);
+        }
+      }
+
+      loadAndStart();
+    </script>
+  </body>
+</html>
