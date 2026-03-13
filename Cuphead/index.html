@@ -4,11 +4,18 @@
     <meta charset="utf-8" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Unity WebGL Player | Cuphead</title>
-    <base href="http://127.0.0.1:5500/" />
+    <base
+      href="https://cdn.jsdelivr.net/gh/SomeRandomFella/portsandrips@master/Cuphead/"
+    />
     <link rel="shortcut icon" href="TemplateData/favicon.ico" />
     <link rel="stylesheet" href="/TemplateData/style.css" />
     <link rel="manifest" href="manifest.webmanifest" />
     <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        width: 100vw;
+      }
       #custom-loader {
         position: fixed;
         inset: 0;
@@ -78,10 +85,9 @@
     </style>
   </head>
   <body>
-    <!-- Custom loading overlay -->
     <div id="custom-loader">
       <h1>Cuphead</h1>
-      <div class="subtitle">getting the good stuff.. SFOOLS FOREVER</div>
+      <div class="subtitle">first load takes long... SFOOLS FOREVER</div>
 
       <div class="load-section">
         <div class="label">
@@ -101,8 +107,22 @@
       <div id="error-text"></div>
     </div>
 
-    <div id="unity-container" style="display: none">
-      <canvas id="unity-canvas" width="960" height="600" tabindex="-1"></canvas>
+    <div
+      id="unity-container"
+      style="
+        display: none;
+        width: 100vw;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      "
+    >
+      <canvas
+        id="unity-canvas"
+        style="width: 100%; height: 100%; display: block"
+        tabindex="-1"
+      ></canvas>
       <div id="unity-loading-bar">
         <div id="unity-logo"></div>
         <div id="unity-progress-bar-empty">
