@@ -2,13 +2,36 @@ const loading = document.getElementById("loading");
 const canvas = document.getElementById("canvas");
 const musicChoice = document.getElementById("music-choice");
 
+async function idbGet(key) {
+  return new Promise((resolve) => {
+    const req = indexedDB.open("game-cache", 1);
+    req.onupgradeneeded = (e) => e.target.result.createObjectStore("files");
+    req.onsuccess = (e) => {
+      const tx = e.target.result.transaction("files", "readonly");
+      const r = tx.objectStore("files").get(key);
+      r.onsuccess = () => resolve(r.result ?? null);
+      r.onerror = () => resolve(null);
+    };
+    req.onerror = () => resolve(null);
+  });
+}
+
+async function idbSet(key, value) {
+  return new Promise((resolve, reject) => {
+    const req = indexedDB.open("game-cache", 1);
+    req.onupgradeneeded = (e) => e.target.result.createObjectStore("files");
+    req.onsuccess = (e) => {
+      const tx = e.target.result.transaction("files", "readwrite");
+      tx.objectStore("files").put(value, key);
+      tx.oncomplete = resolve;
+      tx.onerror = reject;
+    };
+    req.onerror = reject;
+  });
+}
+
 const wantMusic = await new Promise(async (resolve) => {
-  const root = await navigator.storage.getDirectory();
-  let hasAudio = false;
-  try {
-    await root.getFileHandle("ContentAudio.tar.cache", { create: false });
-    hasAudio = true;
-  } catch {}
+  const hasAudio = (await idbGet("ContentAudio.tar")) !== null;
 
   if (hasAudio) {
     document.getElementById("btn-no-music").innerHTML =
@@ -91,15 +114,11 @@ async function fetchMaybeSplit(url, onProgress) {
 }
 
 async function getTar(baseName, label) {
-  const root = await navigator.storage.getDirectory();
-  const cacheKey = baseName + ".cache";
-
-  try {
-    const fh = await root.getFileHandle(cacheKey, { create: false });
-    const file = await fh.getFile();
+  const cached = await idbGet(baseName);
+  if (cached) {
     loading.textContent = `Reading cached ${label}...`;
-    return new Uint8Array(await file.arrayBuffer());
-  } catch {}
+    return cached;
+  }
 
   loading.textContent = `Downloading ${label}...`;
   const countRes = await fetch(baseName + ".count");
@@ -126,10 +145,7 @@ async function getTar(baseName, label) {
   }
 
   loading.textContent = `Caching ${label}...`;
-  const fh = await root.getFileHandle(cacheKey, { create: true });
-  const writable = await fh.createWritable();
-  await writable.write(tar);
-  await writable.close();
+  await idbSet(baseName, tar);
   return tar;
 }
 
@@ -244,6 +260,7 @@ loading.textContent = "Loading game files...";
     let pos = 0;
     let fileCount = 0;
     const writtenPaths = [];
+
     function readString(buf, off, len) {
       let end = off;
       while (end < off + len && buf[end] !== 0) end++;
@@ -253,6 +270,7 @@ loading.textContent = "Loading game files...";
       const s = readString(buf, off, len).trim();
       return s ? parseInt(s, 8) : 0;
     }
+
     while (pos + 512 <= tar.length) {
       const header = tar.subarray(pos, pos + 512);
       if (header.every((b) => b === 0)) break;
@@ -262,25 +280,28 @@ loading.textContent = "Loading game files...";
       const pref = readString(header, 345, 155);
       const fullName = pref ? pref + "/" + name : name;
       pos += 512;
-      if (typeFlag === 48 || typeFlag === 0 || typeFlag === 0x30) {
+
+      if (typeFlag === 53 || typeFlag === 0x35 || name.endsWith("/")) {
+        exports.WasmBootstrap.CreateContentDirectory(prefix + fullName);
+      } else if (typeFlag === 48 || typeFlag === 0 || typeFlag === 0x30) {
         const fullPath = prefix + fullName;
-        writtenPaths.push(fullPath); // ADD THIS
+        writtenPaths.push(fullPath);
         exports.WasmBootstrap.WriteContentFile(
           fullPath,
           tar.subarray(pos, pos + size),
         );
         fileCount++;
       }
+
       pos += Math.ceil(size / 512) * 512;
     }
-    console.log("Written paths sample:", writtenPaths.slice(0, 20)); // ADD THIS
+
+    console.log("Written paths sample:", writtenPaths.slice(0, 20));
     return fileCount;
   }
 
   let total = extractTar(
-    contentBlobUrl
-      ? new Uint8Array(await (await fetch(contentBlobUrl)).arrayBuffer())
-      : new Uint8Array(),
+    new Uint8Array(await (await fetch(contentBlobUrl)).arrayBuffer()),
     "/libsdl/",
   );
   if (audioBlobUrl) {
