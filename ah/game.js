@@ -133,8 +133,21 @@ async function getTar(baseName, label) {
   return tar;
 }
 
+function toBlobUrl(uint8Array, mime = "application/octet-stream") {
+  const blob = new Blob([uint8Array], { type: mime });
+  return URL.createObjectURL(blob);
+}
+
 let contentTar = await getTar("Content.tar", "game content");
-let audioTar = wantMusic ? await getTar("ContentAudio.tar", "music") : null;
+let contentBlobUrl = toBlobUrl(contentTar, "application/wasm");
+contentTar = null;
+
+let audioBlobUrl = null;
+if (wantMusic) {
+  let audioTar = await getTar("ContentAudio.tar", "music");
+  audioBlobUrl = toBlobUrl(audioTar, "application/octet-stream");
+  audioTar = null;
+}
 
 const { dotnet } = await import("./_framework/dotnet.js");
 
@@ -149,26 +162,24 @@ const runtime = await dotnet
     `--jiterpreter-table-size=${32 * 1024}`,
     "--jiterpreter-stats-enabled",
   ])
-  .withResourceLoader((type, _name, defaultUri, _integrity, behavior) => {
+  .withResourceLoader((type, name, defaultUri, _integrity, behavior) => {
+    if (name?.endsWith("blazor.boot.json") || type === "dotnetjs") {
+      return defaultUri;
+    }
+
     if (type === "dotnetwasm" && behavior === "dotnetwasm") {
       return (async () => {
         let idx = 0;
         const fetchNext = async () => {
           const url = defaultUri + idx;
           idx++;
-
           const probe = await fetch(url, { method: "HEAD" });
-          if (probe.ok) {
-            const res = await fetch(url);
-            return res.body.getReader();
-          }
-
+          if (probe.ok) return (await fetch(url)).body.getReader();
           const fileName = url.split("/").pop();
           const urlDir = url.slice(0, url.length - fileName.length);
           const firstDot = fileName.indexOf(".");
           const base = firstDot !== -1 ? fileName.slice(0, firstDot) : fileName;
           const ext = firstDot !== -1 ? fileName.slice(firstDot) : "";
-
           const parts = [];
           let partIndex = 1;
           while (true) {
@@ -184,9 +195,7 @@ const runtime = await dotnet
             }
             partIndex++;
           }
-
           if (parts.length === 0) return null;
-
           let partOffset = 0;
           return {
             read: async () => {
@@ -205,11 +214,8 @@ const runtime = await dotnet
             const { value, done } = await current.read();
             if (done || !value) {
               current = await fetchNext();
-              if (current) {
-                await this.pull(controller);
-              } else {
-                controller.close();
-              }
+              if (current) await this.pull(controller);
+              else controller.close();
             } else {
               controller.enqueue(value);
             }
@@ -221,6 +227,8 @@ const runtime = await dotnet
         });
       })();
     }
+
+    return defaultUri;
   })
   .create();
 
@@ -235,53 +243,50 @@ loading.textContent = "Loading game files...";
   function extractTar(tar, prefix) {
     let pos = 0;
     let fileCount = 0;
-
+    const writtenPaths = [];
     function readString(buf, off, len) {
       let end = off;
       while (end < off + len && buf[end] !== 0) end++;
       return new TextDecoder().decode(buf.subarray(off, end));
     }
-
     function readOctal(buf, off, len) {
       const s = readString(buf, off, len).trim();
       return s ? parseInt(s, 8) : 0;
     }
-
     while (pos + 512 <= tar.length) {
       const header = tar.subarray(pos, pos + 512);
       if (header.every((b) => b === 0)) break;
-
       const name = readString(header, 0, 100);
       const size = readOctal(header, 124, 12);
       const typeFlag = header[156];
       const pref = readString(header, 345, 155);
       const fullName = pref ? pref + "/" + name : name;
-
       pos += 512;
-
-      if (typeFlag === 53 || typeFlag === 0x35 || name.endsWith("/")) {
-        exports.WasmBootstrap.CreateContentDirectory(prefix + fullName);
-      } else if (typeFlag === 48 || typeFlag === 0 || typeFlag === 0x30) {
+      if (typeFlag === 48 || typeFlag === 0 || typeFlag === 0x30) {
+        const fullPath = prefix + fullName;
+        writtenPaths.push(fullPath); // ADD THIS
         exports.WasmBootstrap.WriteContentFile(
-          prefix + fullName,
+          fullPath,
           tar.subarray(pos, pos + size),
         );
         fileCount++;
       }
-
       pos += Math.ceil(size / 512) * 512;
     }
+    console.log("Written paths sample:", writtenPaths.slice(0, 20)); // ADD THIS
     return fileCount;
   }
 
-  let total = extractTar(contentTar, "/libsdl/");
-  contentTar = null;
-
-  if (audioTar) {
+  let total = extractTar(
+    contentBlobUrl
+      ? new Uint8Array(await (await fetch(contentBlobUrl)).arrayBuffer())
+      : new Uint8Array(),
+    "/libsdl/",
+  );
+  if (audioBlobUrl) {
     loading.textContent = "Loading music...";
-    const audioCount = extractTar(audioTar, "/libsdl/");
-    audioTar = null;
-    total += audioCount;
+    const audioArray = await (await fetch(audioBlobUrl)).arrayBuffer();
+    total += extractTar(new Uint8Array(audioArray), "/libsdl/");
   }
 }
 

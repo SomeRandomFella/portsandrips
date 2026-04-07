@@ -78,6 +78,15 @@
         </button>
       </div>
     </div>
+    <script>
+      const originalFetch = window.fetch;
+
+      window.fetch = function (resource, options = {}) {
+        options.credentials = "omit"; // force no cookies
+        return originalFetch(resource, options);
+      };
+    </script>
+
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <script type="module" src="game.js"></script>
   </body>
