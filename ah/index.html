@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stardew Valley</title>
+    <base
+      href="https://cdn.jsdelivr.net/gh/SomeRandomFella/portsandrips@master/ah/"
+    />
     <style>
       *,
       *::before,
@@ -86,7 +89,22 @@
         return originalFetch(resource, options);
       };
     </script>
+    <script>
+      const bgAudio = new Audio("tuff.mp3");
+      bgAudio.loop = true;
+      bgAudio.volume = 0.5;
 
+      setTimeout(() => {
+        bgAudio.play().catch((err) => {
+          console.log("Autoplay blocked until user interacts.");
+        });
+      }, 5000);
+    </script>
+    <script>
+      alert(
+        "READ ME!!! GAME DOES NOT AUTO SAVE, WHEN GETTING OFF CLICK EXIT GAME AND DOWNLOAD THE .TAR SAVE FILE AND THEN YOU CAN IMPORT IT NEXT TIME",
+      );
+    </script>
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
     <script type="module" src="game.js"></script>
   </body>
