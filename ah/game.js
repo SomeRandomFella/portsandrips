@@ -88,8 +88,8 @@ async function getTar(baseName, label, partCount) {
   let totalReceived = 0;
 
   for (let i = 0; i < partCount; i++) {
-    const partSuffix = String(i).padStart(2, "0"); // 00, 01, 02, ...
-    const url = `${baseName}${partSuffix}`; // e.g. Content.tar00
+    const partSuffix = String(i).padStart(2, "0"); 
+    const url = `${baseName}${partSuffix}`; 
     loading.textContent = `Downloading ${label} (part ${i + 1}/${partCount})... ${(totalReceived / 1048576) | 0} MB`;
     const data = await fetchOne(url, (bytes) => {
       loading.textContent = `Downloading ${label} (part ${i + 1}/${partCount})... ${((totalReceived + bytes) / 1048576) | 0} MB`;
@@ -165,9 +165,8 @@ const runtime = await dotnet
               const { value, done } = await currentReader.read();
               if (!done && value) {
                 controller.enqueue(value);
-                return; // yield back to consumer
+                return;
               }
-              // current chunk exhausted — try the next one
               currentReader = await fetchNextReader();
               if (!currentReader) {
                 controller.close();
