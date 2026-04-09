@@ -52,100 +52,61 @@ const wantMusic = await new Promise(async (resolve) => {
 });
 musicChoice.style.display = "none";
 
-async function fetchMaybeSplit(url, onProgress) {
-  const probe = await fetch(url, { method: "HEAD" });
-  if (probe.ok) {
-    const res = await fetch(url);
-    const reader = res.body.getReader();
-    const chunks = [];
-    let received = 0;
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      chunks.push(value);
-      received += value.length;
-      if (onProgress) onProgress(received);
-    }
-    const out = new Uint8Array(received);
-    let offset = 0;
-    for (const chunk of chunks) {
-      out.set(chunk, offset);
-      offset += chunk.length;
-    }
-    return out;
-  }
-
-  const fileName = url.split("/").pop();
-  const urlDir = url.slice(0, url.length - fileName.length);
-  const firstDot = fileName.indexOf(".");
-  const base = firstDot !== -1 ? fileName.slice(0, firstDot) : fileName;
-  const ext = firstDot !== -1 ? fileName.slice(firstDot) : "";
-
-  const parts = [];
-  let partIndex = 1;
-  let totalReceived = 0;
+async function fetchOne(url, onProgress) {
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`Failed to fetch ${url}: ${res.status}`);
+  const reader = res.body.getReader();
+  const chunks = [];
+  let received = 0;
   while (true) {
-    const partNum = String(partIndex).padStart(3, "0");
-    const partUrl = `${urlDir}${base}.part${partNum}${ext}`;
-    const res = await fetch(partUrl);
-    if (!res.ok) {
-      if (partIndex === 1)
-        throw new Error(`Failed to fetch ${url} or any split parts`);
-      break;
-    }
-    const reader = res.body.getReader();
-    while (true) {
-      const { done, value } = await reader.read();
-      if (done) break;
-      parts.push(value);
-      totalReceived += value.length;
-      if (onProgress) onProgress(totalReceived);
-    }
-    partIndex++;
+    const { done, value } = await reader.read();
+    if (done) break;
+    chunks.push(value);
+    received += value.length;
+    if (onProgress) onProgress(received);
   }
-
-  const merged = new Uint8Array(totalReceived);
+  const out = new Uint8Array(received);
   let offset = 0;
-  for (const chunk of parts) {
-    merged.set(chunk, offset);
+  for (const chunk of chunks) {
+    out.set(chunk, offset);
     offset += chunk.length;
   }
-  return merged;
+  return out;
 }
 
-async function getTar(baseName, label) {
-  const cached = await idbGet(baseName);
+async function getTar(baseName, label, partCount) {
+  const cacheKey = baseName; 
+  const cached = await idbGet(cacheKey);
   if (cached) {
     loading.textContent = `Reading cached ${label}...`;
     return cached;
   }
 
   loading.textContent = `Downloading ${label}...`;
-  const countRes = await fetch(baseName + ".count");
-  const chunkCount = parseInt(await countRes.text());
-  const chunks = [];
-  let received = 0;
 
-  for (let i = 0; i < chunkCount; i++) {
-    const url = `${baseName}${String(i).padStart(2, "0")}`;
-    loading.textContent = `Downloading ${label}... ${(received / 1048576) | 0} MB`;
-    const data = await fetchMaybeSplit(url, (bytes) => {
-      loading.textContent = `Downloading ${label}... ${((received + bytes) / 1048576) | 0} MB`;
+  const parts = [];
+  let totalReceived = 0;
+
+  for (let i = 0; i < partCount; i++) {
+    const partSuffix = String(i).padStart(2, "0"); // 00, 01, 02, ...
+    const url = `${baseName}${partSuffix}`; // e.g. Content.tar00
+    loading.textContent = `Downloading ${label} (part ${i + 1}/${partCount})... ${(totalReceived / 1048576) | 0} MB`;
+    const data = await fetchOne(url, (bytes) => {
+      loading.textContent = `Downloading ${label} (part ${i + 1}/${partCount})... ${((totalReceived + bytes) / 1048576) | 0} MB`;
     });
-    chunks.push(data);
-    received += data.length;
-    loading.textContent = `Downloading ${label}... ${(received / 1048576) | 0} MB`;
+    parts.push(data);
+    totalReceived += data.length;
   }
 
-  const tar = new Uint8Array(received);
+  const tar = new Uint8Array(totalReceived);
   let offset = 0;
-  for (const chunk of chunks) {
-    tar.set(chunk, offset);
-    offset += chunk.length;
+  for (const part of parts) {
+    tar.set(part, offset);
+    offset += part.length;
   }
 
   loading.textContent = `Caching ${label}...`;
-  await idbSet(baseName, tar);
+  await idbSet(cacheKey, tar);
   return tar;
 }
 
@@ -154,13 +115,13 @@ function toBlobUrl(uint8Array, mime = "application/octet-stream") {
   return URL.createObjectURL(blob);
 }
 
-let contentTar = await getTar("Content.tar", "game content");
+let contentTar = await getTar("Content.tar", "game content", 3);
 let contentBlobUrl = toBlobUrl(contentTar, "application/wasm");
 contentTar = null;
 
 let audioBlobUrl = null;
 if (wantMusic) {
-  let audioTar = await getTar("ContentAudio.tar", "music");
+  let audioTar = await getTar("ContentAudio.tar", "music", 24);
   audioBlobUrl = toBlobUrl(audioTar, "application/octet-stream");
   audioTar = null;
 }
@@ -186,54 +147,32 @@ const runtime = await dotnet
     if (type === "dotnetwasm" && behavior === "dotnetwasm") {
       return (async () => {
         let idx = 0;
-        const fetchNext = async () => {
-          const url = defaultUri + idx;
+
+        const fetchNextReader = async () => {
+          const url = `${defaultUri}${idx}`;
           idx++;
-          const probe = await fetch(url, { method: "HEAD" });
-          if (probe.ok) return (await fetch(url)).body.getReader();
-          const fileName = url.split("/").pop();
-          const urlDir = url.slice(0, url.length - fileName.length);
-          const firstDot = fileName.indexOf(".");
-          const base = firstDot !== -1 ? fileName.slice(0, firstDot) : fileName;
-          const ext = firstDot !== -1 ? fileName.slice(firstDot) : "";
-          const parts = [];
-          let partIndex = 1;
-          while (true) {
-            const partNum = String(partIndex).padStart(3, "0");
-            const partUrl = `${urlDir}${base}.part${partNum}${ext}`;
-            const res = await fetch(partUrl);
-            if (!res.ok) break;
-            const reader = res.body.getReader();
-            while (true) {
-              const { done, value } = await reader.read();
-              if (done) break;
-              parts.push(value);
-            }
-            partIndex++;
-          }
-          if (parts.length === 0) return null;
-          let partOffset = 0;
-          return {
-            read: async () => {
-              if (partOffset >= parts.length)
-                return { done: true, value: undefined };
-              return { done: false, value: parts[partOffset++] };
-            },
-          };
+          const res = await fetch(url);
+          if (!res.ok) return null; 
+          return res.body.getReader();
         };
 
-        let current = await fetchNext();
-        if (!current) throw new Error("failed to fetch first wasm chunk");
+        let currentReader = await fetchNextReader();
+        if (!currentReader) throw new Error("Failed to fetch first wasm chunk");
 
         const stream = new ReadableStream({
           async pull(controller) {
-            const { value, done } = await current.read();
-            if (done || !value) {
-              current = await fetchNext();
-              if (current) await this.pull(controller);
-              else controller.close();
-            } else {
-              controller.enqueue(value);
+            while (true) {
+              const { value, done } = await currentReader.read();
+              if (!done && value) {
+                controller.enqueue(value);
+                return; // yield back to consumer
+              }
+              // current chunk exhausted — try the next one
+              currentReader = await fetchNextReader();
+              if (!currentReader) {
+                controller.close();
+                return;
+              }
             }
           },
         });
