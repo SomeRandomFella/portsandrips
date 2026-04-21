@@ -85,7 +85,7 @@
       const originalFetch = window.fetch;
 
       window.fetch = function (resource, options = {}) {
-        options.credentials = "omit"; // force no cookies
+        options.credentials = "omit";
         return originalFetch(resource, options);
       };
     </script>
@@ -98,11 +98,11 @@
         bgAudio.play().catch((err) => {
           console.log("Autoplay blocked until user interacts.");
         });
-      }, 5000);
+      }, 8000);
     </script>
     <script>
       alert(
-        "READ ME!!! GAME DOES NOT AUTO SAVE, WHEN GETTING OFF CLICK EXIT GAME AND DOWNLOAD THE .TAR SAVE FILE AND THEN YOU CAN IMPORT IT NEXT TIME",
+        "READ ME!!! GAME DOES NOT AUTO SAVE, WHEN GETTING OFF CLICK EXIT GAME AND DOWNLOAD THE .TAR SAVE FILE AND THEN YOU CAN IMPORT IT NEXT TIME (also music replaced with fire shit cause og music broke and i dont have time to fix)",
       );
     </script>
     <canvas id="canvas" oncontextmenu="event.preventDefault()"></canvas>
