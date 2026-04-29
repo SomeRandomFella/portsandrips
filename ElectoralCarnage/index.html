@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Unity Web Player | Electoral Carnage</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        background: #000;
+      }
+      #unity-canvas {
+        width: 100vw;
+        height: 100vh;
+        display: block;
+        background: #000;
+      }
+      #loading-overlay {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: sans-serif;
+        font-size: 16px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="loading-overlay">
+      <span id="loading-label">Loading…</span>
+    </div>
+
+    <canvas id="unity-canvas" tabindex="-1"></canvas>
+
+    <script>
+      if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+        var meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content =
+          "width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes";
+        document.head.appendChild(meta);
+      }
+
+      const label = document.getElementById("loading-label");
+
+      async function fetchParts(partUrls, labelName) {
+        const buffers = [];
+        let totalLoaded = 0;
+
+        const sizes = await Promise.all(
+          partUrls.map(async (url) => {
+            try {
+              const r = await fetch(url, { method: "HEAD" });
+              return parseInt(r.headers.get("content-length") || "0", 10);
+            } catch {
+              return 0;
+            }
+          }),
+        );
+        const totalSize = sizes.reduce((a, b) => a + b, 0);
+
+        for (let i = 0; i < partUrls.length; i++) {
+          label.textContent = `Loading ${labelName} part ${i + 1} of ${partUrls.length}`;
+
+          const response = await fetch(partUrls[i]);
+          if (!response.ok)
+            throw new Error(
+              `Failed to fetch ${partUrls[i]}: ${response.status}`,
+            );
+
+          if (totalSize > 0 && response.body) {
+            const reader = response.body.getReader();
+            const chunks = [];
+            let partLoaded = 0;
+            while (true) {
+              const { done, value } = await reader.read();
+              if (done) break;
+              chunks.push(value);
+              partLoaded += value.length;
+              totalLoaded += value.length;
+            }
+            const partBuf = new Uint8Array(partLoaded);
+            let offset = 0;
+            for (const c of chunks) {
+              partBuf.set(c, offset);
+              offset += c.length;
+            }
+            buffers.push(partBuf);
+          } else {
+            buffers.push(new Uint8Array(await response.arrayBuffer()));
+          }
+        }
+
+        const total = buffers.reduce((s, b) => s + b.length, 0);
+        const merged = new Uint8Array(total);
+        let off = 0;
+        for (const b of buffers) {
+          merged.set(b, off);
+          off += b.length;
+        }
+        return merged.buffer;
+      }
+
+      const blobCache = {};
+
+      function makeBlobUrl(buffer, mimeType) {
+        return URL.createObjectURL(new Blob([buffer], { type: mimeType }));
+      }
+
+      const originalFetch = window.fetch.bind(window);
+      window.fetch = function (input, init) {
+        const url = typeof input === "string" ? input : input.url;
+        for (const [key, blobUrl] of Object.entries(blobCache)) {
+          if (url && url.includes(key)) return originalFetch(blobUrl, init);
+        }
+        return originalFetch(input, init);
+      };
+
+      (async () => {
+        try {
+          const wasmBuffer = await fetchParts(
+            [
+              "Build/Newgrounds.wasm.br.part001",
+              "Build/Newgrounds.wasm.br.part002",
+              "Build/Newgrounds.wasm.br.part003",
+            ],
+            "WebAssembly",
+          );
+          blobCache["Newgrounds.wasm.br"] = makeBlobUrl(
+            wasmBuffer,
+            "application/wasm",
+          );
+
+          const dataBuffer = await fetchParts(
+            [
+              "Build/Newgrounds.data.br.part001",
+              "Build/Newgrounds.data.br.part002",
+              "Build/Newgrounds.data.br.part003",
+              "Build/Newgrounds.data.br.part004",
+            ],
+            "Game Data",
+          );
+          blobCache["Newgrounds.data.br"] = makeBlobUrl(
+            dataBuffer,
+            "application/octet-stream",
+          );
+
+          label.textContent = "Loading engine…";
+
+          await new Promise((resolve, reject) => {
+            const s = document.createElement("script");
+            s.src = "Build/Newgrounds.loader.js";
+            s.onload = resolve;
+            s.onerror = reject;
+            document.head.appendChild(s);
+          });
+
+          await createUnityInstance(
+            document.querySelector("#unity-canvas"),
+            {
+              arguments: [],
+              dataUrl: "Build/Newgrounds.data.br",
+              frameworkUrl: "Build/Newgrounds.framework.js.br",
+              codeUrl: "Build/Newgrounds.wasm.br",
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: "BombSequiturGames",
+              productName: "Electoral Carnage",
+              productVersion: "1.0",
+            },
+            (progress) => {
+              label.textContent = `Loading game… ${Math.round(progress * 100)}%`;
+            },
+          );
+
+          document.getElementById("loading-overlay").style.display = "none";
+        } catch (err) {
+          label.textContent = "Error: " + err.message;
+          console.error(err);
+        }
+      })();
+    </script>
+  </body>
+</html>
