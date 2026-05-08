@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
+    />
+    <meta name="generator" content="Scirra Construct" />
+    <meta name="msapplication-TileColor" content="#3b4045" />
+    <meta name="theme-color" content="#3b4045" />
+    <title>Shoot Out Reloaded</title>
+    <link rel="icon" type="image/png" href="icons/icon-32.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/arcadegame.css" />
+    <style>
+      #splash {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        transition: opacity 0.6s ease;
+      }
+      #splash.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+      #splash h1 {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        color: #fff;
+        font-size: 2.5rem;
+        margin: 0 0 1rem 0;
+        text-align: center;
+        letter-spacing: 2px;
+      }
+      #splash p {
+        font-family: "Comic Sans MS", "Comic Sans", cursive;
+        color: #aaa;
+        font-size: 1rem;
+        margin: 0;
+        text-align: center;
+      }
+      #splash .dots::after {
+        content: "";
+        animation: dots 1.2s steps(3, end) infinite;
+      }
+      @keyframes dots {
+        0% {
+          content: "";
+        }
+        33% {
+          content: ".";
+        }
+        66% {
+          content: "..";
+        }
+        100% {
+          content: "...";
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="splash">
+      <h1>ripped by sfools</h1>
+      <p>loading<span class="dots"></span></p>
+    </div>
+
+    <noscript>
+      <div id="notSupportedWrap">
+        <h2 id="notSupportedTitle">This content requires JavaScript</h2>
+        <p class="notSupportedMessage">
+          JavaScript appears to be disabled. Please enable it to view this
+          content.
+        </p>
+      </div>
+    </noscript>
+
+    <script>
+      var constructNet_madeInC2 = false;
+      var constructNet_gameID = 53185;
+      var constructNet_gameVersionRecordID = 96472;
+      var constructNet_gameHost = "";
+      var constructNet_gameURL = "";
+      var constructNet_gameEmbedURL = "";
+
+      var constructNet_scriptURLs = [
+        "scripts/modernjscheck.js",
+        "scripts/supportcheck.js",
+        "scripts/main.js",
+      ];
+    </script>
+
+    <script>
+      (function () {
+        var src = `"use strict";
+(function () {
+  var gameStarted = false;
+
+  function hideSplash() {
+    var splash = document.getElementById("splash");
+    if (splash) {
+      splash.classList.add("hidden");
+      setTimeout(function() { splash.remove(); }, 700);
+    }
+  }
+
+  window.PlayGame = {
+    init: function () {
+      PlayGame.preventPageScrolling();
+      PlayGame.startGame();
+    },
+
+    startGame: function () {
+      if (gameStarted === true) return;
+
+      var urls = constructNet_scriptURLs;
+      var chain = Promise.resolve();
+      for (var i = 0; i < urls.length; i++) {
+        (function(scriptSrc) {
+          chain = chain.then(function () {
+            return fetch(scriptSrc)
+              .then(function(r) { return r.blob(); })
+              .then(function(blob) {
+                var blobUrl = URL.createObjectURL(blob);
+                return new Promise(function(resolve) {
+                  var s = document.createElement("script");
+                  s.src = blobUrl;
+                  s.async = false;
+                  s.onload = function() { URL.revokeObjectURL(blobUrl); resolve(); };
+                  s.onerror = function() {
+                    URL.revokeObjectURL(blobUrl);
+                    var s2 = document.createElement("script");
+                    s2.src = scriptSrc;
+                    s2.async = false;
+                    s2.onload = resolve;
+                    s2.onerror = resolve;
+                    document.body.appendChild(s2);
+                  };
+                  document.body.appendChild(s);
+                });
+              });
+          });
+        })(urls[i]);
+      }
+
+      chain.then(function () {
+        if (constructNet_madeInC2) {
+          jQuery(document).ready(function () {
+            cr_createRuntime("c2canvas");
+          });
+          document.addEventListener("visibilitychange", PlayGame.c2onVisibilityChanged, false);
+        }
+        gameStarted = true;
+        setTimeout(hideSplash, 2500);
+      });
+    },
+
+    c2onVisibilityChanged: function () {
+      if (document.hidden) cr_setSuspended(true);
+      else cr_setSuspended(false);
+    },
+
+    preventPageScrolling: function () {
+      document.addEventListener("keydown", function (event) {
+        if (event.target && event.target.tagName &&
+            ["input","textarea","datalist","select"].includes(event.target.tagName.toLowerCase())) {
+          return;
+        }
+        if (["ArrowLeft","ArrowUp","ArrowRight","ArrowDown"].includes(event.key)) {
+          event.preventDefault();
+        }
+      });
+      document.oncontextmenu = function (e) {
+        if (e.preventDefault) e.preventDefault();
+        if (e.stopPropagation) e.stopPropagation();
+      };
+      document.addEventListener("mousewheel", function (e) {
+        e.preventDefault();
+      }, { passive: false });
+    },
+  };
+
+  PlayGame.init();
+})();`;
+
+        var blob = new Blob([src], { type: "application/javascript" });
+        var blobUrl = URL.createObjectURL(blob);
+        var s = document.createElement("script");
+        s.src = blobUrl;
+        s.onload = function () {
+          URL.revokeObjectURL(blobUrl);
+        };
+        document.body.appendChild(s);
+      })();
+    </script>
+  </body>
+</html>
