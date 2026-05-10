@@ -2,69 +2,42 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
     <meta name="generator" content="Scirra Construct" />
     <meta name="msapplication-TileColor" content="#3b4045" />
     <meta name="theme-color" content="#3b4045" />
+    <base href="https://cdn.jsdelivr.net/gh/SomeRandomFella/portsandrips/shootout/"/>
     <title>Shoot Out Reloaded</title>
     <link rel="icon" type="image/png" href="icons/icon-32.png" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="css/arcadegame.css" />
+    <link rel="stylesheet" href="
+https://construct-static.com/css/v1759/refresh/arcadegame.css" />
     <style>
       #splash {
-        position: fixed;
-        inset: 0;
-        background: #000;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        z-index: 99999;
-        transition: opacity 0.6s ease;
+        position: fixed; inset: 0; background: #000;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        z-index: 99999; transition: opacity 0.6s ease;
       }
-      #splash.hidden {
-        opacity: 0;
-        pointer-events: none;
-      }
+      #splash.hidden { opacity: 0; pointer-events: none; }
       #splash h1 {
         font-family: "Comic Sans MS", "Comic Sans", cursive;
-        color: #fff;
-        font-size: 2.5rem;
-        margin: 0 0 1rem 0;
-        text-align: center;
-        letter-spacing: 2px;
+        color: #fff; font-size: 2.5rem; margin: 0 0 1rem 0;
+        text-align: center; letter-spacing: 2px;
       }
       #splash p {
         font-family: "Comic Sans MS", "Comic Sans", cursive;
-        color: #aaa;
-        font-size: 1rem;
-        margin: 0;
-        text-align: center;
+        color: #aaa; font-size: 1rem; margin: 0; text-align: center;
       }
-      #splash .dots::after {
-        content: "";
-        animation: dots 1.2s steps(3, end) infinite;
-      }
+      #splash .dots::after { content: ""; animation: dots 1.2s steps(3, end) infinite; }
       @keyframes dots {
-        0% {
-          content: "";
-        }
-        33% {
-          content: ".";
-        }
-        66% {
-          content: "..";
-        }
-        100% {
-          content: "...";
-        }
+        0%   { content: ""; }
+        33%  { content: "."; }
+        66%  { content: ".."; }
+        100% { content: "..."; }
       }
     </style>
   </head>
-
   <body>
     <div id="splash">
       <h1>ripped by sfools</h1>
@@ -74,10 +47,7 @@
     <noscript>
       <div id="notSupportedWrap">
         <h2 id="notSupportedTitle">This content requires JavaScript</h2>
-        <p class="notSupportedMessage">
-          JavaScript appears to be disabled. Please enable it to view this
-          content.
-        </p>
+        <p class="notSupportedMessage">JavaScript appears to be disabled.</p>
       </div>
     </noscript>
 
@@ -89,115 +59,198 @@
       var constructNet_gameURL = "";
       var constructNet_gameEmbedURL = "";
 
+      // CDN base — all scripts and workers are fetched from here
+      var CDN_BASE = "https://cdn.jsdelivr.net/gh/SomeRandomFella/portsandrips/shootout/";
+
       var constructNet_scriptURLs = [
         "scripts/modernjscheck.js",
         "scripts/supportcheck.js",
         "scripts/main.js",
       ];
+
+      // These are the worker scripts the Construct runtime will try to spawn.
+      // We pre-fetch them from the CDN so they are ready as blob URLs.
+      var constructNet_workerURLs = [
+        "scripts/dispatchworker.js",
+        "scripts/jobworker.js",
+        "workermain.js",
+      ];
     </script>
 
     <script>
-      (function () {
-        var src = `"use strict";
-(function () {
-  var gameStarted = false;
+    (function () {
 
-  function hideSplash() {
-    var splash = document.getElementById("splash");
-    if (splash) {
-      splash.classList.add("hidden");
-      setTimeout(function() { splash.remove(); }, 700);
-    }
-  }
+      var OriginalWorker          = window.Worker;
+      var OriginalCreateObjectURL = URL.createObjectURL.bind(URL);
+      var OriginalRevokeObjectURL = URL.revokeObjectURL.bind(URL);
 
-  window.PlayGame = {
-    init: function () {
-      PlayGame.preventPageScrolling();
-      PlayGame.startGame();
-    },
+      // ------------------------------------------------------------------
+      // Map: filename -> CDN blob URL (populated by prefetch)
+      // ------------------------------------------------------------------
+      var blobCache = {};
 
-    startGame: function () {
-      if (gameStarted === true) return;
-
-      var urls = constructNet_scriptURLs;
-      var chain = Promise.resolve();
-      for (var i = 0; i < urls.length; i++) {
-        (function(scriptSrc) {
-          chain = chain.then(function () {
-            return fetch(scriptSrc)
-              .then(function(r) { return r.blob(); })
-              .then(function(blob) {
-                var blobUrl = URL.createObjectURL(blob);
-                return new Promise(function(resolve) {
-                  var s = document.createElement("script");
-                  s.src = blobUrl;
-                  s.async = false;
-                  s.onload = function() { URL.revokeObjectURL(blobUrl); resolve(); };
-                  s.onerror = function() {
-                    URL.revokeObjectURL(blobUrl);
-                    var s2 = document.createElement("script");
-                    s2.src = scriptSrc;
-                    s2.async = false;
-                    s2.onload = resolve;
-                    s2.onerror = resolve;
-                    document.body.appendChild(s2);
-                  };
-                  document.body.appendChild(s);
-                });
-              });
-          });
-        })(urls[i]);
+      function basename(url) {
+        return String(url).split(/[?#]/)[0].split("/").pop();
       }
 
-      chain.then(function () {
-        if (constructNet_madeInC2) {
-          jQuery(document).ready(function () {
-            cr_createRuntime("c2canvas");
+      // Fetch a script from the CDN by filename and cache it as a blob URL.
+      function fetchFromCDN(filename) {
+        // Strip to basename if a full/relative path is passed
+        var name = basename(filename);
+        if (blobCache[name]) return Promise.resolve(blobCache[name]);
+
+        var cdnUrl = CDN_BASE + filename;
+        return fetch(cdnUrl)
+          .then(function (r) {
+            if (!r.ok) throw new Error("HTTP " + r.status + " for " + cdnUrl);
+            return r.text();
+          })
+          .then(function (text) {
+            var blob    = new Blob([text], { type: "application/javascript" });
+            var blobUrl = OriginalCreateObjectURL(blob);
+            blobCache[name]     = blobUrl;
+            blobCache[filename] = blobUrl; // also cache by original path
+            return blobUrl;
           });
-          document.addEventListener("visibilitychange", PlayGame.c2onVisibilityChanged, false);
-        }
-        gameStarted = true;
-        setTimeout(hideSplash, 2500);
-      });
-    },
+      }
 
-    c2onVisibilityChanged: function () {
-      if (document.hidden) cr_setSuspended(true);
-      else cr_setSuspended(false);
-    },
+      // ------------------------------------------------------------------
+      // Given ANY url the runtime might pass to new Worker(url):
+      //   file:// or relative → strip to basename, fetch from CDN as blob
+      //   blob:               → already safe, return as-is
+      //   https:              → fetch from CDN (re-blob for null origin safety)
+      // ------------------------------------------------------------------
+      function resolveSafeWorkerUrl(url) {
+        var s = String(url);
+        if (s.startsWith("blob:")) return Promise.resolve(s);
+        // For everything else, get the filename and fetch from CDN
+        var name = basename(s);
+        return fetchFromCDN(name);
+      }
 
-    preventPageScrolling: function () {
-      document.addEventListener("keydown", function (event) {
-        if (event.target && event.target.tagName &&
-            ["input","textarea","datalist","select"].includes(event.target.tagName.toLowerCase())) {
-          return;
-        }
-        if (["ArrowLeft","ArrowUp","ArrowRight","ArrowDown"].includes(event.key)) {
-          event.preventDefault();
-        }
-      });
-      document.oncontextmenu = function (e) {
-        if (e.preventDefault) e.preventDefault();
-        if (e.stopPropagation) e.stopPropagation();
+      // ------------------------------------------------------------------
+      // Proxy Worker: buffers postMessage calls until the real worker loads
+      // ------------------------------------------------------------------
+      function ProxyWorker(scriptURL, options) {
+        var self   = this;
+        self._real = null;
+        self._queue = [];
+        self.onmessage = null;
+        self.onerror   = null;
+
+        resolveSafeWorkerUrl(scriptURL).then(function (safeUrl) {
+          var w = new OriginalWorker(safeUrl, options);
+          w.onmessage = function (e) { if (self.onmessage) self.onmessage(e); };
+          w.onerror   = function (e) { if (self.onerror)   self.onerror(e);  };
+          self._real  = w;
+          self._queue.forEach(function (item) { w.postMessage(item[0], item[1]); });
+          self._queue = [];
+        }).catch(function (e) {
+          console.error("ProxyWorker: failed to load worker for:", scriptURL, e);
+        });
+      }
+      ProxyWorker.prototype.postMessage = function (msg, transfer) {
+        if (this._real) this._real.postMessage(msg, transfer);
+        else this._queue.push([msg, transfer]);
       };
-      document.addEventListener("mousewheel", function (e) {
-        e.preventDefault();
-      }, { passive: false });
-    },
-  };
+      ProxyWorker.prototype.terminate = function () {
+        if (this._real) this._real.terminate();
+      };
+      ProxyWorker.prototype.addEventListener = function (type, fn, opts) {
+        var self = this;
+        var check = setInterval(function () {
+          if (self._real) {
+            self._real.addEventListener(type, fn, opts);
+            clearInterval(check);
+          }
+        }, 10);
+      };
+      ProxyWorker.prototype.removeEventListener = function (type, fn) {
+        if (this._real) this._real.removeEventListener(type, fn);
+      };
 
-  PlayGame.init();
-})();`;
+      // Replace global Worker BEFORE any runtime script runs
+      window.Worker = ProxyWorker;
 
-        var blob = new Blob([src], { type: "application/javascript" });
-        var blobUrl = URL.createObjectURL(blob);
-        var s = document.createElement("script");
-        s.src = blobUrl;
-        s.onload = function () {
-          URL.revokeObjectURL(blobUrl);
+      // ------------------------------------------------------------------
+      // Helpers
+      // ------------------------------------------------------------------
+      function hideSplash() {
+        var el = document.getElementById("splash");
+        if (el) {
+          el.classList.add("hidden");
+          setTimeout(function () { el.remove(); }, 700);
+        }
+      }
+
+      function preventPageScrolling() {
+        document.addEventListener("keydown", function (e) {
+          if (e.target && ["input","textarea","datalist","select"]
+              .includes(e.target.tagName.toLowerCase())) return;
+          if (["ArrowLeft","ArrowUp","ArrowRight","ArrowDown"].includes(e.key))
+            e.preventDefault();
+        });
+        document.oncontextmenu = function (e) {
+          e.preventDefault && e.preventDefault();
+          e.stopPropagation && e.stopPropagation();
         };
-        document.body.appendChild(s);
-      })();
+        document.addEventListener("mousewheel", function (e) {
+          e.preventDefault();
+        }, { passive: false });
+      }
+
+      // Load a game script from CDN as a blob <script> tag.
+      // Running as a blob keeps origin "null" consistent — the worker proxy
+      // intercepts any Worker() calls the runtime makes from inside.
+      function loadScript(relPath) {
+        return fetchFromCDN(relPath).then(function (blobUrl) {
+          return new Promise(function (resolve) {
+            var s     = document.createElement("script");
+            s.src     = blobUrl;
+            s.async   = false;
+            s.onload  = function () { resolve(); };
+            s.onerror = function () {
+              console.warn("Script load error:", relPath);
+              resolve();
+            };
+            document.body.appendChild(s);
+          });
+        });
+      }
+
+      // ------------------------------------------------------------------
+      // Boot: pre-fetch all worker scripts, THEN load game scripts in order
+      // ------------------------------------------------------------------
+      preventPageScrolling();
+
+      var workerPrefetch = Promise.all(
+        constructNet_workerURLs.map(function (name) {
+          return fetchFromCDN(name).catch(function (e) {
+            console.warn("Worker prefetch failed:", name, e);
+          });
+        })
+      );
+
+      workerPrefetch.then(function () {
+        var urls  = constructNet_scriptURLs;
+        var chain = Promise.resolve();
+        urls.forEach(function (src) {
+          chain = chain.then(function () { return loadScript(src); });
+        });
+
+        chain.then(function () {
+          if (constructNet_madeInC2 && typeof jQuery !== "undefined") {
+            jQuery(document).ready(function () { cr_createRuntime("c2canvas"); });
+            document.addEventListener("visibilitychange", function () {
+              if (document.hidden) cr_setSuspended(true);
+              else cr_setSuspended(false);
+            }, false);
+          }
+          setTimeout(hideSplash, 2500);
+        });
+      });
+
+    })();
     </script>
   </body>
 </html>
