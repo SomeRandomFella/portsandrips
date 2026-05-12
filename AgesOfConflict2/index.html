@@ -1,54 +1,110 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-us">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Unity Web Player | Ages of Conflict</title>
-    <link rel="shortcut icon" href="TemplateData/favicon.ico">
-    <link rel="stylesheet" href="TemplateData/style.css">
-    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="shortcut icon" href="TemplateData/favicon.ico" />
+    <link rel="stylesheet" href="TemplateData/style.css" />
+    <link rel="manifest" href="manifest.webmanifest" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: #000;
+        overflow: hidden;
+      }
+
+      #custom-loading-screen {
+        position: fixed;
+        inset: 0;
+        background: #000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999;
+        font-family: Arial, sans-serif;
+        color: #fff;
+        gap: 8px;
+        transition: opacity 0.6s ease;
+      }
+
+      #custom-loading-screen.hidden {
+        opacity: 0;
+        pointer-events: none;
+      }
+
+      #loading-label {
+        font-size: 14px;
+        font-weight: normal;
+      }
+
+      #loading-mb {
+        font-size: 13px;
+        color: #666;
+        min-height: 1.2em;
+      }
+
+      #unity-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      #unity-canvas {
+        display: block;
+      }
+
+      #unity-warning {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 10000;
+      }
+    </style>
   </head>
   <body>
-    <div id="unity-container">
-      <canvas id="unity-canvas" width=1280 height=720 tabindex="-1"></canvas>
-      <div id="unity-loading-bar">
-        <div id="unity-logo"></div>
-        <div id="unity-progress-bar-empty">
-          <div id="unity-progress-bar-full"></div>
-        </div>
-      </div>
-      <div id="unity-warning"> </div>
+    <div id="custom-loading-screen">
+      <div id="loading-label">Loading</div>
+      <div id="loading-mb"></div>
     </div>
-    <script>
-      window.addEventListener("load", function () {
-        if ("serviceWorker" in navigator) {
-          navigator.serviceWorker.register("ServiceWorker.js");
-        }
-      });
 
+    <div id="unity-container">
+      <canvas
+        id="unity-canvas"
+        width="1280"
+        height="720"
+        tabindex="-1"
+      ></canvas>
+      <div id="unity-warning"></div>
+    </div>
+
+    <script>
       var container = document.querySelector("#unity-container");
       var canvas = document.querySelector("#unity-canvas");
-      var loadingBar = document.querySelector("#unity-loading-bar");
-      var progressBarFull = document.querySelector("#unity-progress-bar-full");
       var warningBanner = document.querySelector("#unity-warning");
+      var loadingScreen = document.querySelector("#custom-loading-screen");
+      var loadingMb = document.querySelector("#loading-mb");
 
-      // Shows a temporary message banner/ribbon for a few seconds, or
-      // a permanent error message on top of the canvas if type=='error'.
-      // If type=='warning', a yellow highlight color is used.
-      // Modify or remove this function to customize the visually presented
-      // way that non-critical warnings and error messages are presented to the
-      // user.
       function unityShowBanner(msg, type) {
         function updateBannerVisibility() {
-          warningBanner.style.display = warningBanner.children.length ? 'block' : 'none';
+          warningBanner.style.display = warningBanner.children.length
+            ? "block"
+            : "none";
         }
-        var div = document.createElement('div');
+        var div = document.createElement("div");
         div.innerHTML = msg;
         warningBanner.appendChild(div);
-        if (type == 'error') div.style = 'background: red; padding: 10px;';
+        if (type == "error") div.style = "background: red; padding: 10px;";
         else {
-          if (type == 'warning') div.style = 'background: yellow; padding: 10px;';
-          setTimeout(function() {
+          if (type == "warning")
+            div.style = "background: yellow; padding: 10px;";
+          setTimeout(function () {
             warningBanner.removeChild(div);
             updateBannerVisibility();
           }, 5000);
@@ -56,54 +112,150 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/AgesOfConflict.loader.js";
-      var config = {
-        arguments: [],
-        dataUrl: buildUrl + "/AgesOfConflict.data",
-        frameworkUrl: buildUrl + "/AgesOfConflict.framework.js",
-        codeUrl: buildUrl + "/AgesOfConflict.wasm",
-        streamingAssetsUrl: "StreamingAssets",
-        companyName: "JoySparkGames",
-        productName: "Ages of Conflict",
-        productVersion: "4.4.0",
-        showBanner: unityShowBanner,
-        // errorHandler: function(err, url, line) {
-        //    alert("error " + err + " occurred at line " + line);
-        //    // Return 'true' if you handled this error and don't want Unity
-        //    // to process it further, 'false' otherwise.
-        //    return true;
-        // },
-      };
-
-      // By default Unity keeps WebGL canvas render target size matched with
-      // the DOM size of the canvas element (scaled by window.devicePixelRatio)
-      // Set this to false if you want to decouple this synchronization from
-      // happening inside the engine, and you would instead like to size up
-      // the canvas DOM size and WebGL render target sizes yourself.
-      // config.matchWebGLToCanvasSize = false;
-
       if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-        // Mobile device style: fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
+        var meta = document.createElement("meta");
+        meta.name = "viewport";
+        meta.content =
+          "width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes";
+        document.getElementsByTagName("head")[0].appendChild(meta);
       }
 
+      function formatMB(bytes) {
+        return (bytes / (1024 * 1024)).toFixed(2) + " MB";
+      }
 
-      loadingBar.style.display = "block";
+      function fetchParts(baseName, partCount, onProgress) {
+        var parts = [];
+        for (var i = 1; i <= partCount; i++) {
+          parts.push(baseName + ".part" + String(i).padStart(3, "0"));
+        }
+
+        var loaded = new Array(partCount).fill(0);
+        var totals = new Array(partCount).fill(0);
+
+        var fetches = parts.map(function (url, idx) {
+          return fetch(url).then(function (res) {
+            if (!res.ok) throw new Error("Failed to fetch " + url);
+            var contentLength = res.headers.get("content-length");
+            totals[idx] = contentLength ? parseInt(contentLength, 10) : 0;
+            var reader = res.body.getReader();
+            var chunks = [];
+            function read() {
+              return reader.read().then(function (result) {
+                if (result.done) return chunks;
+                chunks.push(result.value);
+                loaded[idx] += result.value.length;
+                var totalLoaded = loaded.reduce(function (a, b) {
+                  return a + b;
+                }, 0);
+                var totalSize = totals.reduce(function (a, b) {
+                  return a + b;
+                }, 0);
+                if (onProgress) onProgress(totalLoaded, totalSize);
+                return read();
+              });
+            }
+            return read();
+          });
+        });
+
+        return Promise.all(fetches).then(function (allChunks) {
+          var combined = allChunks.map(function (chunks) {
+            var totalLen = chunks.reduce(function (a, c) {
+              return a + c.length;
+            }, 0);
+            var out = new Uint8Array(totalLen);
+            var offset = 0;
+            chunks.forEach(function (c) {
+              out.set(c, offset);
+              offset += c.length;
+            });
+            return out;
+          });
+          var totalLen = combined.reduce(function (a, c) {
+            return a + c.length;
+          }, 0);
+          var merged = new Uint8Array(totalLen);
+          var offset = 0;
+          combined.forEach(function (c) {
+            merged.set(c, offset);
+            offset += c.length;
+          });
+          return merged.buffer;
+        });
+      }
+
+      var buildUrl = "Build";
+      var loaderUrl = buildUrl + "/AgesOfConflict.loader.js";
+
+      var wasmLoaded = 0,
+        wasmTotal = 0;
+      var dataLoaded = 0,
+        dataTotal = 0;
+
+      function updateProgress() {
+        var totalLoaded = wasmLoaded + dataLoaded;
+        loadingMb.textContent = formatMB(totalLoaded);
+      }
+
+      var wasmPromise = fetchParts(
+        buildUrl + "/AgesOfConflict.wasm",
+        4,
+        function (loaded, total) {
+          wasmLoaded = loaded;
+          wasmTotal = total;
+          updateProgress();
+        },
+      );
+
+      var dataPromise = fetchParts(
+        buildUrl + "/AgesOfConflict.data",
+        4,
+        function (loaded, total) {
+          dataLoaded = loaded;
+          dataTotal = total;
+          updateProgress();
+        },
+      );
 
       var script = document.createElement("script");
       script.src = loaderUrl;
-      script.onload = () => {
-        createUnityInstance(canvas, config, (progress) => {
-          progressBarFull.style.width = 100 * progress + "%";
-        }).then((unityInstance) => {
-          loadingBar.style.display = "none";
-        }).catch((message) => {
-          alert(message);
-        });
+      script.onload = function () {
+        Promise.all([wasmPromise, dataPromise])
+          .then(function (results) {
+            var wasmBuffer = results[0];
+            var dataBuffer = results[1];
+
+            var config = {
+              arguments: [],
+              dataUrl: URL.createObjectURL(
+                new Blob([dataBuffer], { type: "application/octet-stream" }),
+              ),
+              frameworkUrl: buildUrl + "/AgesOfConflict.framework.js",
+              codeUrl: URL.createObjectURL(
+                new Blob([wasmBuffer], { type: "application/wasm" }),
+              ),
+              streamingAssetsUrl: "StreamingAssets",
+              companyName: "JoySparkGames",
+              productName: "Ages of Conflict",
+              productVersion: "4.4.0",
+              showBanner: unityShowBanner,
+            };
+
+            createUnityInstance(canvas, config, function (progress) {})
+              .then(function (unityInstance) {
+                loadingScreen.classList.add("hidden");
+                setTimeout(function () {
+                  loadingScreen.style.display = "none";
+                }, 700);
+              })
+              .catch(function (message) {
+                alert(message);
+              });
+          })
+          .catch(function (err) {
+            alert(`failed! ${err.message}`);
+          });
       };
       document.body.appendChild(script);
     </script>
