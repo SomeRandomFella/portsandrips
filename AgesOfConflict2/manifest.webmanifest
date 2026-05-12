@@ -1,0 +1,15 @@
+{
+    "name": "Ages of Conflict",
+    "short_name": "Ages of Conflict",
+    "start_url": "index.html",
+    "display": "fullscreen",
+    "background_color": "#161935",
+    "theme_color": "#000",
+    "description": "",
+    "icons": [{
+      "src": "TemplateData/icons/unity-logo-dark.png",
+      "sizes": "144x144",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }]
+  }

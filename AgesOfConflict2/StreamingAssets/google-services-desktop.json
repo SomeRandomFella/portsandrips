@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "680202253860",
+    "project_id": "ages-of-conflict-world-war-sim",
+    "storage_bucket": "ages-of-conflict-world-war-sim.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:680202253860:android:367b63cfecc3f9582a0ab1",
+        "android_client_info": {
+          "package_name": "com.JoySparkGames.AgesofConflict"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAs6dFGkDuHPogSJ-1U4BWfoiUsAsCrWoM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
