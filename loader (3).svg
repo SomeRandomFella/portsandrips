@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xhtml="http://www.w3.org/1999/xhtml" width="100%" height="100%" viewBox="0 0 1920 1080">
+  <foreignObject id="fo" width="1920" height="1080" x="0" y="0">
+    <xhtml:html xmlns="http://www.w3.org/1999/xhtml" style="width:100%;height:100%;margin:0;padding:0;">
+    <xhtml:head>
+      <xhtml:style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html, body { width: 100%; height: 100%; overflow: hidden; background: #000; }
+        iframe { position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+      </xhtml:style>
+    </xhtml:head>
+    <xhtml:body>
+      <xhtml:iframe id="fm" src="about:blank"></xhtml:iframe>
+      <xhtml:script>
+      //<![CDATA[
+        (function() {
+          function size() {
+            var w = window.innerWidth, h = window.innerHeight;
+            var svg = document.querySelector('svg');
+            var fo  = document.querySelector('foreignObject');
+            if (svg) { svg.setAttribute('width', w); svg.setAttribute('height', h); svg.setAttribute('viewBox','0 0 '+w+' '+h); }
+            if (fo)  { fo.setAttribute('width', w);  fo.setAttribute('height', h); }
+          }
+          size();
+          window.addEventListener('resize', size);
+
+          var v = Date.now();
+          var CDN = 'https://cdn.jsdelivr.net/gh/picklechiplover23/htmlgames@master/';
+
+          var html = '<!doctype html><html><head>'
+            + '<meta charset="UTF-8"/>'
+            + '<title>SFoolsOS</title>'
+            + '<link rel="icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvELFNNShrmmkbsnODhEEUZ8tLqch8tQENyw&s" type="image/png"/>'
+            + '<link rel="stylesheet" href="' + CDN + 'main.css?v=' + v + '"/>'
+            + '<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-app-compat.js"><\/script>'
+            + '<script src="https://www.gstatic.com/firebasejs/9.22.1/firebase-database-compat.js"><\/script>'
+            + '<script async src="https://www.googletagmanager.com/gtag/js?id=G-5FLJZ49NBT"><\/script>'
+            + '<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-5FLJZ49NBT");<\/script>'
+            + '</head><body>'
+            + '<div id="aha"></div>'
+            + '<div id="root"></div>'
+            + '<script src="https://cdn.jsdelivr.net/npm/socket.io-client/dist/socket.io.min.js"><\/script>'
+            + '<script>'
+            +   'var vantaEffect=null;'
+            +   'var v=' + v + ';'
+            +   'function loadScript(src){return new Promise(function(resolve,reject){var s=document.createElement("script");s.src=src;s.onload=resolve;s.onerror=reject;document.head.appendChild(s);});}'
+            +   'loadScript("https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js")'
+            +   '.then(function(){return loadScript("https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.globe.min.js");})'
+            +   '.then(function(){'
+            +     'vantaEffect=VANTA.GLOBE({el:"#aha",mouseControls:true,touchControls:true,gyroControls:false,minHeight:200,minWidth:200,scale:1,scaleMobile:1,color:0xdc0000,backgroundColor:0x0});'
+            +   '})'
+            +   '.catch(function(){});'
+            +   'var ms=document.createElement("script");'
+            +   'ms.src="' + CDN + 'mainscript.js?v="+v;'
+            +   'ms.type="text/javascript";'
+            +   'ms.onerror=function(){alert("failed to get newest version. use offline version instead.");};'
+            +   'ms.onload=function(){if(document.readyState==="complete"||document.readyState==="interactive"){init(true);}};'
+            +   'document.head.appendChild(ms);'
+            +   'function resizeVanta(){if(vantaEffect)vantaEffect.resize();}'
+            +   'var debouncedResize=(function(){var t;return function(){clearTimeout(t);t=setTimeout(resizeVanta,150);};})();'
+            +   'window.addEventListener("resize",debouncedResize);'
+            +   'document.addEventListener("DOMContentLoaded",function(){var obs=new MutationObserver(debouncedResize);obs.observe(document.getElementById("root"),{childList:true,subtree:true});});'
+            + '<\/script>'
+            + '</body></html>';
+
+          var frame = document.getElementById('fm');
+          var fdoc = frame.contentDocument || frame.contentWindow.document;
+          fdoc.open();
+          fdoc.write(html);
+          fdoc.close();
+        })();
+      //]]>
+      </xhtml:script>
+    </xhtml:body>
+    </xhtml:html>
+  </foreignObject>
+</svg>
