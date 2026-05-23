@@ -4,9 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Unity WebGL Player | WorldBox</title>
-     <base
-      href="https://cdn.jsdelivr.net/gh/SomeRandomFella/portsandrips/WorldFox/"
-    />
+    <base href="https://cdn.jsdelivr.net/gh/SomeRandomFella/portsandrips/WorldFox/" />
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -62,13 +60,14 @@
         updateBannerVisibility();
       }
 
-      var buildUrl = "Build";
+      var cdnBase = "https://cdn.jsdelivr.net/gh/SomeRandomFella/portsandrips/WorldFox/";
+      var buildUrl = cdnBase + "Build";
       var loaderUrl = buildUrl + "/WorldFox.loader.js";
       var config = {
         dataUrl: buildUrl + "/WorldFox.data",
         frameworkUrl: buildUrl + "/WorldFox.framework.js",
         codeUrl: buildUrl + "/WorldFox.wasm",
-        streamingAssetsUrl: "StreamingAssets",
+        streamingAssetsUrl: cdnBase + "StreamingAssets",
         companyName: "mkarpenko",
         productName: "WorldBox",
         productVersion: "0.51.2",
@@ -94,10 +93,10 @@
 
       function installSplitFileLoader(manifest) {
         var originalFetch = window.fetch.bind(window);
-        var rootUrl = new URL(".", window.location.href);
+        var rootUrl = new URL(cdnBase);
 
         function normalizeSplitPath(input) {
-          var url = new URL(typeof input === "string" ? input : input.url, window.location.href);
+          var url = new URL(typeof input === "string" ? input : input.url, cdnBase);
           var path = decodeURIComponent(url.pathname);
           var rootPath = rootUrl.pathname;
           if (path.indexOf(rootPath) === 0) {
