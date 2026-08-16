@@ -1,8 +1,0 @@
-# order by which modules are loaded 
-# you can disable modules by commenting them out using #
-#
-#
-
-core
-testMod
-crazyTraits
