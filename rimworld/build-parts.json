@@ -1,0 +1,145 @@
+{
+  "version": 1,
+  "partSize": 19000000,
+  "files": {
+    "Build/RimWebWorld.data": {
+      "size": 371704395,
+      "sha256": "9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc",
+      "type": "application/octet-stream",
+      "parts": [
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/001.part",
+          "size": 19000000,
+          "sha256": "71f09371978be5e89587e7b10833382cbf16351d5cdcfeee421a9eb661606415"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/002.part",
+          "size": 19000000,
+          "sha256": "06d33da2cf79646c6bc3daa5743babeebda066f7a335d576bfac00438314f4f9"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/003.part",
+          "size": 19000000,
+          "sha256": "2ff47cccf4c61959cf2b9472213f465cf32452c1a91e04f8157368c8a77ef7d0"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/004.part",
+          "size": 19000000,
+          "sha256": "cc0c96f9cecd83a01520a6dbe8c60e211110dc8d577de4d54f7fa96b2037ec0c"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/005.part",
+          "size": 19000000,
+          "sha256": "64eba490e35595e3193f132d2f9633cea5e3bb68a30b6da1b2d1a6d5a64b1de3"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/006.part",
+          "size": 19000000,
+          "sha256": "8f81ccfc128a7668b729098be504e1202aab1bb4f0899475cec66db57d28a333"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/007.part",
+          "size": 19000000,
+          "sha256": "9cfd57e1644c449117fbb512819f9cbd0abb0c691953155bd3d552ccd955b5d6"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/008.part",
+          "size": 19000000,
+          "sha256": "aaf555bf9129f33614d3457f52ebd8de93e4d517a62cf4f3364792d09ea9f4e7"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/009.part",
+          "size": 19000000,
+          "sha256": "56cef55ff7b1193d5b64713114200edca8d0d3921de4dd65d59e4f19e6096dc2"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/010.part",
+          "size": 19000000,
+          "sha256": "12c31002d479808b257f8959dc9b9c5e016081cc65b14f369534337c6688f055"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/011.part",
+          "size": 19000000,
+          "sha256": "086ccaf9f8d2b9b225d35392b051bfc61a76d71e175901d8f22397f19bed2bfc"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/012.part",
+          "size": 19000000,
+          "sha256": "0f3f0bbda567a02ccceec281565d0046d1a5b33f467dbf42daaa0a2e556f751b"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/013.part",
+          "size": 19000000,
+          "sha256": "487dde2b4af6494f32411babe17ba44b884753341e283efff565b4bccfaad126"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/014.part",
+          "size": 19000000,
+          "sha256": "7b9953593e7d637aafe15cd9a9a3a883d0e7f3e617c818256a788b47ffa4577f"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/015.part",
+          "size": 19000000,
+          "sha256": "ab9e3dc67db0193dec68fdf0ff7caca1c25703d29b9aedd68006b504792c3b22"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/016.part",
+          "size": 19000000,
+          "sha256": "42c2705a076da1dd28a2a6109a7151bbc858144454e6c7fe3f6166b7a57393f2"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/017.part",
+          "size": 19000000,
+          "sha256": "f95208d7738c361d9bfb8242712a1bd45aa16e240d96262e94c0fd0f2a3f4e5e"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/018.part",
+          "size": 19000000,
+          "sha256": "d41821fb8d58c21722724cfb2dd5a6064c40425ccb5eaae0ce34125db198a9ff"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/019.part",
+          "size": 19000000,
+          "sha256": "8f22af02b42c82f96c2b34346e353b7d3cc561f24d75b3dac614b88da5be77f8"
+        },
+        {
+          "path": "Build/parts/9dfbba8ed8b8e635596917d547492bed6b34cc766150378e6d856494a402bbfc/020.part",
+          "size": 10704395,
+          "sha256": "a77e73ded94f8a223e140c79bbc292e7daff038f157ffac829998b3fa33718f5"
+        }
+      ]
+    },
+    "Build/RimWebWorld.wasm": {
+      "size": 84418118,
+      "sha256": "459b1550ccad5bf37857153a105aef88fb85358e62d60d8b99996f8157123c79",
+      "type": "application/wasm",
+      "parts": [
+        {
+          "path": "Build/parts/459b1550ccad5bf37857153a105aef88fb85358e62d60d8b99996f8157123c79/001.part",
+          "size": 19000000,
+          "sha256": "0cc35223062d6cc6aa17ab55b1213f46ce6cf5f988c37f8e15dda4b7ec650794"
+        },
+        {
+          "path": "Build/parts/459b1550ccad5bf37857153a105aef88fb85358e62d60d8b99996f8157123c79/002.part",
+          "size": 19000000,
+          "sha256": "c0106bc5d4be4cf4bfdbb1f020abca2343e5f2f6d29afbfc74cbfd9e8e97bed6"
+        },
+        {
+          "path": "Build/parts/459b1550ccad5bf37857153a105aef88fb85358e62d60d8b99996f8157123c79/003.part",
+          "size": 19000000,
+          "sha256": "dc64e5070600f1e348f32f2c04833f541b3e0c6633bfcf9e49981ad57b76a798"
+        },
+        {
+          "path": "Build/parts/459b1550ccad5bf37857153a105aef88fb85358e62d60d8b99996f8157123c79/004.part",
+          "size": 19000000,
+          "sha256": "fc00af8a42a501444a3f2079d0ec8ed95fc6cfa3a6a629d84c67a85836684071"
+        },
+        {
+          "path": "Build/parts/459b1550ccad5bf37857153a105aef88fb85358e62d60d8b99996f8157123c79/005.part",
+          "size": 8418118,
+          "sha256": "4a0f5a214d3e2c671e200a455345640018619914635510ac1ead26eb6cea150f"
+        }
+      ]
+    }
+  }
+}
