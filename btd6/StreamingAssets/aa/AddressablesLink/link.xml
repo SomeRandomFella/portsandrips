@@ -1,0 +1,1756 @@
+<linker>
+  <assembly fullname="Assembly-CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="AccoladesDisplayButton" preserve="all" />
+    <type fullname="AnimationAudio" preserve="all" />
+    <type fullname="AnimationEventAudio" preserve="all" />
+    <type fullname="AnimatorRandomIdleSelector" preserve="all" />
+    <type fullname="AnimatorRepeat" preserve="all" />
+    <type fullname="Assets.Cursor" preserve="all" />
+    <type fullname="Assets.MainMenuWorld.Scripts.MainMenuWorldChoreographer" preserve="all" />
+    <type fullname="Assets.Scripts.ConsoleDumpingGround.GamepadButtonScrolling" preserve="all" />
+    <type fullname="Assets.Scripts.Data.AccessibilityData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Accolades.AccoladeData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Accolades.AllAccolades" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Achievements.Achievement" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Achievements.AchievementData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.AnimatedCharacters.QuestCharacter" preserve="all" />
+    <type fullname="Assets.Scripts.Data.AnimCurves.AnimCurve" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Artifacts.BoostArtifactData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Artifacts.FrontierMapArtifactData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Artifacts.ItemArtifactData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Artifacts.MapArtifactData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Artifacts.StaminaTraitArtifactData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Artifacts.TraitArtifactData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ArtifactsData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Audio.AudioJukeBox" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Audio.MusicItem" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Badges.SocialSeasonBadgeData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Badges.SocialSeasonBadgesData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.Attack" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.AttackFilter" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.FollowTouchSetting" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.RotateToPointer" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.TargetClose" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.TargetFirst" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.TargetLast" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Attacks.TargetStrong" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Bloons.CreateEffectOnPop" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Display" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Effect" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Emissions.EmissionRotationOffTowerDirection" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Emissions.SingleEmission" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Events.EntityEvent" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.OffsetPosition" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.Age" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.Cash" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.CreateProp" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.CreateSoundOnPickup" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.CreateTextEffect" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.Damage" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.DamageModifierForBloonType" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.FollowPathProjectile" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.Pickup" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.Projectile" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.RefreshPierce" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.Slow" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Projectiles.TravelStrait" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Props.Prop" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Sound" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Towers.AddGravityToEntity" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Towers.AirUnit" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Towers.CreateEffectOnPlace" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Towers.CreateEffectOnSell" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Towers.CreateSoundOnBloonDestroyed" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Towers.HeliMovement" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Weapons.EjectEffect" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Weapons.FireFromAirUnit" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Behaviors.Weapons.Weapon" preserve="all" />
+    <type fullname="Assets.Scripts.Data.BloonMutatorData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.BloonPopupData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonDisplayScriptable" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonImmuneSoundScriptable" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonOverlayData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonOverlayScriptable" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonScriptable" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonSoundFXScriptable" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonVariantData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.BloonVariantsData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Boss.Bosses" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Boss.BossRushData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Boss.BossRushScriptable" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Boss.MenuBackgrounds" preserve="all" />
+    <type fullname="Assets.Scripts.Data.BTD6AssetLibrary" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.ContestedTerritoryData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.TeamsStoreItem" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.TeamsStoreItems" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Coop.CoopData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.BloonAssetChanges.BloonAssetChange" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.BloonDecals.BloonDecal" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.BloonPopFXs.BloonPopFX" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.DarkTempleAssetChanges.DarkTempleAssetChange" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.Pets.Pet" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.PowerAssetChanges.PowerAssetChange" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.Props.Prop" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.TowerAssetChanges.TowerAssetChange" preserve="all" />
+    <type fullname="Assets.Scripts.Data.CustomInGameHud.CustomInGameHuds" preserve="all" />
+    <type fullname="Assets.Scripts.Data.DifficultySprites.DifficultySpritesAsset" preserve="all" />
+    <type fullname="Assets.Scripts.Data.EmotesNS.Emote" preserve="all" />
+    <type fullname="Assets.Scripts.Data.EmotesNS.Emotes" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Feats.LegendsFeatData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Feats.LegendsFeatsData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.GameData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.GameEditor.GameEditorData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.GameEditor.GraphNodeModelDescriptor" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Gameplay.FreeplayGroupData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Gameplay.IncomeSet" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Gameplay.MergeableRoundSet" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Gameplay.Mods.Mod" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Gameplay.RoundSet" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Gameplay.TalkingHeadHint" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Gameplay.TalkingHeadHints" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Global.BuffIconSprites" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Global.LootIconSprites" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Global.RankInfo" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Global.TowerBackgroundSprites" preserve="all" />
+    <type fullname="Assets.Scripts.Data.HeroCutsceneData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Input.GamepadData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Input.SelectableMeshConfig" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Input.SolidShadowConfig" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Knowledge.KnowledgeItem" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledgeData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Languages.DynamicFontReferences" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Languages.LanguageAsset" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierAllFishData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierCampaignData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierChestData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierDifficultyData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierEncounterData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierFishData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierFishTableData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierFlagsData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierLevelData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierLootData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierNPCData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierSheriffItemData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsCutscene" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsQuestData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsTileAssetData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueAssetData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueBloonModifierData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueXpShopItem" preserve="all" />
+    <type fullname="Assets.Scripts.Data.MapEditor.MapEditorAreaTextureData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.MapEditor.MapEditorBaseMapTextureData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.MapEditor.MapEditorData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.MapEditor.MapEditorProp" preserve="all" />
+    <type fullname="Assets.Scripts.Data.MapEditor.MapEditorStampData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.MapEditor.MapEditorTrackTextureData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.MapSets.MapSet" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ModeData.ModesData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.PowersProData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ProfileAvatarsNS.ProfileAvatar" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ProfileAvatarsNS.ProfileAvatars" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ProfileAvatarsNS.ProfileBanner" preserve="all" />
+    <type fullname="Assets.Scripts.Data.ProfileAvatarsNS.ProfileBanners" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestDetails" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Quests.TaskData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Skins.SkinData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Skins.SkinsData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.SocialSeasons.SeasonPerkData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.SocialSeasons.SeasonPerkItem" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Store.LootThemes" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Store.StoreItem" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Store.StoreItems" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Sweepstakes.StatEventData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Teams.CTTeamsBuildingMaterialSwap" preserve="all" />
+    <type fullname="Assets.Scripts.Data.Teams.TeamsData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.TowerSnappingData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.TrackArrowData" preserve="all" />
+    <type fullname="Assets.Scripts.Data.TrophyStore.TrophyStoreItem" preserve="all" />
+    <type fullname="Assets.Scripts.Data.TrophyStore.TrophyStoreItems" preserve="all" />
+    <type fullname="Assets.Scripts.GameEditor.UI.GameEditorView" preserve="all" />
+    <type fullname="Assets.Scripts.Models.ServerEvents.DisableEventObjects" preserve="all" />
+    <type fullname="Assets.Scripts.Models.ServerEvents.EnableEventObjects" preserve="all" />
+    <type fullname="Assets.Scripts.Models.ServerEvents.SwapEventObject" preserve="all" />
+    <type fullname="Assets.Scripts.Models.ServerEvents.SwapEventSprite" preserve="all" />
+    <type fullname="Assets.Scripts.Models.ServerEvents.SwapEventTexture" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Audio.AudioFactory" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Audio.JukeBoxScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Audio.MiniJukeBoxPlayer" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Cascade.Variable.BoolVariable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Cascade.Variable.FloatVariable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.AnimationEventHandler" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.AnimationProperties" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.CustomMeshFrameAnimator" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.CustomSpriteFrameAnimator" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.EyesBlink" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.MonkeyAnimationController" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.PlayableAnimator" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.PlayableAnimatorSimple" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.PropAnimationController" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.SpeedUpSlowDownRotation" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.FaceCamera" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.LodGroup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.NodeLifespan" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.OffsetTowardsCamera" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.ProjectileTrailEffect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.QualityPurge" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.QualityPurgeStopAtTime" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Display.UnityDisplayNode" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Effects.Effect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Game" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.BTD6Gamepad" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.ConsoleShared" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.DropdownGamepadContext" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.FullScreenEffectLayout" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.FullScreenEffectLayoutConfig" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadAutoClickOnSelect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadAutoToggleOnSelect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadCenterScroll" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadContext" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadInactive" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadInputField" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadRectScroll" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadScaleSelected" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadScrollConstraint" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadSelectedState" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadSliderStep" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GamepadSystem" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.GridLayoutChangeDetector" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.InputModeActive" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.InputSystem.SpringSelectable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.Jewel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.JewelBar" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.JewelBarButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.JewelBarButtonSet" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.JewelBarItem" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.JewelBarToggle" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.JewelIcon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.Jewel.ToggleJewel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.UIEffect.SelectableMesh" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.UIEffect.SolidShadowSetup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.AbilityCooldownAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Actions.DarkDungeonsFireTriggerAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Actions.SetAreaActiveAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Actions.SetRegenRemovableActiveAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Actions.SuspendTowersOnAreaAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Actions.TriggerMapActionsAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.AnimatorRandomStartFrame" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.AnimatorRandomStatePlayLength" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.ApplyTowerFreeze" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Area" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.BaseArea" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.BezierLineNodes" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.CamoDetectAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.CoopArea" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.CoopAreaDivisionType" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.CoopAreaLayout" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.CoopAreaMark" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.CurvedLineNodes" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.CustomMushroomGrottoRemoveable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.DamageAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.DamageTypeAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.CreateObjectOnRemoveableSold" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.HideObjectOnRemoveableSold" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.InteractableClick" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.InteractableClickSequence" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.PlayAnimationOnRemoveableSold" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.PlayEffectOnRemoveableSold" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.PlaySoundOnRemoveableSold" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Effects.ShowObjectOnRoundRemoveableStarted" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Extras.CandyFallsOompaChecker" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Gizmos.DarkDungeonsStatue" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Gizmos.GizmoTimeDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Gizmos.MapGizmo" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Gizmos.TrickyTracksTrainController" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Gizmos.TrickyTracksTrainSender" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Gizmos.WorkshopPowerCore" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Gizmos.WorkshopReverseMotor" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.HeroXpAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.LeakPoint" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.LinearRoundBasedCost" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Map" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.MapMods" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Path" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.PathPointInfo" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.PierceAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.PolygonArea" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.PolyLineNodes" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.PriceAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.RandomStateBehavior" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.RangeAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.RateAreaBuff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.RegenRemovable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Removeable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.RoundRemoveable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.ScrollTexture" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.AlternateRoundMultiPathSplitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.AlternateRoundSplitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.BloonTagOnlySplitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.BloonTagSplitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.MoabOnlySplitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.PathSpawner" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.RuleBossBloon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.RulePrimeNumberRound" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.RuleSplitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.ToggleSplitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Splitter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.AdjustShaderAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.AdoraSunGodDarkMapTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.AfterRoundTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.BloonsPoppedTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.ChangeEmitProjectileAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.ChangeSimTimeElapsedTriggerAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.CreateAreaAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.CreateAreasAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.CreateTowerAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.CycleAnimationsAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.CycleAreasAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.DarkDungeonsStatueActiveTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.DestroyAreaAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.DestroyAreasAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.EmitProjectileAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.EnableGameObjectAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.EnablePathTargetZoneAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.EncryptedTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.IncrementCaveMonkeyHitsAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.InteractableClickSequenceTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.InteractableClickTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.LivesLowerThanTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.MapActions" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.MapEvent" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.MapEventActiveAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.MovingPlatformAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.OnMapCreatedTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.OnMapLoadedWithActiveRegenRemovableTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.OnProjectileHitTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.PathActiveAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.PlayAnimationAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.PlayEffectAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.PlayMusicUnityAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.PlaySoundUnityAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.PreBloonSpawnTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.RemovableActiveAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.RemoveableSoldTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.RepeatableTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.ReverseModeTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.RotateAreaAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.ScrollTextureChangeAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.SellRemoveableAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.SimTimeElapsedTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.StartMapTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.StartRoundTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.ToggleSplitterAction" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.TowerInAreaTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Map.Triggers.TowerPlacedTrigger" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.MapProps.Behaviors.AnimationSpecialEffect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.MapProps.Behaviors.DisableTowersInRange" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.MapProps.MapProp" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Menu.MenuManager" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Powers.Effects.CreateEffectOnPower" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Powers.Power" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Render.MPB_LerpFloatOnEnable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Render.NightModeSettings" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Scenes.InitialLoadingScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Scenes.LoadingScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Scenes.NinjaKiwiSplashScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Scenes.TitleScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Ability" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Behaviors.ActivateAttack" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Behaviors.AmbushTech" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbility" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Behaviors.CreateSoundOnAbility" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Behaviors.HideAbility" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Behaviors.TechBotLink" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Abilities.Behaviors.TechBotUnlink" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.ActivateAbilityAfterInterval" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Attack" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.AttackAirUnit" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Behaviors.AmbushPointsSetting" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Behaviors.AttackFilter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Behaviors.NoAmbushSetting" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Behaviors.RandomTarget" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Behaviors.RotateToTarget" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Behaviors.SheRaTarget" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.Attack.Behaviors.TargetFirst" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CircleFootprint" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateEffectOnPlace" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateEffectOnSell" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateEffectOnTowerExpire" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateEffectOnUpgrade" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateSoundOnSell" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateSoundOnTowerExpire" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateSoundOnTowerPlace" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.CreateSoundOnUpgrade" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.IgnoreAllMutatorsTower" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.PlayAnimationIndex" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.PowerProTower" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Behaviors.TowerExpire" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.ClickBox" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Emissions.InstantDamageEmission" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Emissions.LineProjectileEmission" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Emissions.SingleEmission" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Filters.FilterAll" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Filters.FilterAllExceptTarget" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Filters.FilterInvisible" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Filters.FilterMoab" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Filters.FilterOutOffscreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Mods.ApplyMod" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.AddCashOnProjectileExpire" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.Age" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.ClearHitBloons" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CollideOnlyWithTarget" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateEffectOnExhausted" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateEffectOnExpire" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateProjectileOnContact" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateProjectileOnExpire" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollision" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCreated" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExhaust" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.CreateSoundOnProjectileExpire" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.Damage" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.DamageModifierForBloonType" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.DamageModifierForRound" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.Instant" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.JungleVineEffect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.ProjectileFilter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.RefreshPierce" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.Slow" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.SlowModifierForTag" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.TrackTarget" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Behaviors.TravelStrait" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Projectiles.Projectile" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Tower" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Upgrades.PowerProUpgradePath" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Weapons.Behaviors.CreateEffectOnContact" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Weapons.Behaviors.CreateEffectProjectileAfterTime" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Weapons.Behaviors.EjectEffect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Towers.Weapons.Weapon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccessibilitySettingsUI" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccoladeDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccoladeNotification" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccoladeNotificationButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccoladesNotificationPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccoladeStatsDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccoladeSummaryScreenDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.AccoladeSummaryScreenIcon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Achievements.AchievementPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Achievements.AchievementsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.BossBloons.BossLeaderboardScorePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ButtonLite" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ButtonWithPip" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Callouts.CalloutUiData" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ChallengeBrowserPanelPlayButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ChallengeBrowserSearchPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ChallengeBrowserTitleValidator" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ChallengePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ChallengeStatPlayerInfo" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ChallengeStatView" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ContentBrowser" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ExtraSettingsPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ExtraSettingsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.GamePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.MapPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.MapReportPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.OdysseyPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.PlayerContentInfoPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.PlayerContentStatsPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ChallengeEditor.ReportButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.CollapsiblePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.CommonBackgroundScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.CommonForegroundScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.CommonPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopDifficuiltyMedalPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopInGamePlayerPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopJoinMatchScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopLobbyScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopLobbySearchField" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopMessageBoardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopPlayerPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopPlayerSliderPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.CoopPlayerStatsPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.LocalCoopPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.PlaySocialScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Coop.UiCoopManager" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.CoopAreaVisualUI" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.BossEventCoopScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.BossEventScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.BossEventScreenPlayPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.BossEventScreenTierRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.BossRushWorldAudio" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.BossSelectButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.BossSelectPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.DailyChallengeScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.DCTowerDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.MapSelectPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DailyChallenge.RaceEventScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.DescriptionPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.EffectScaleControl" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.EndGame.BloonCauseDeathDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameEvents.DailyChallengePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameEvents.GameEventsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameEvents.GenericEventPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameEvents.SocialSeasonTagline" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameOver.CoopDefeatScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameOver.DefeatScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameOver.SinglePlayerStatsPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.GameOver.VictoryScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.HeroInGame.HeroInGameScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.HoverableInfoPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.AbilitiesMenu.AbilityMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.ActionMenu.GoFastForwardToggle" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.BloonMenu.BloonMenuToggle" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.BossBloons.BossArmourUI" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.BuffIcon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.BuffIndicatorUi" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.ConsolePlayerMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.CoopAreaIndicators" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.CTBossHud" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.EditorMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.EditorMenuPopout" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.EditorRemoveablesLayerSelectPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorArea" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorDebugPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorMusicSelectPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorPath" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorPathSplitterPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorPathSplitterPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorSceneController" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.MapEditorSplitterPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.PathSelectNodes" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.PathSplineNode" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.PipPagingPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.PowerEditorPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.RemoveableLayerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.SelectedDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.SplineNode" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.StampDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.StartEndNode" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.TangentNode" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.TowerEditorPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EmotesMenu.Emotes.EmotePlayerUi" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EmotesMenu.EmotesManager" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.InGame" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.LayerButtonProxy" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.LayeredUiObject" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.MapEditorCategoryLayersViewer" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.PlayerMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.PropPackItemDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.PropPackPurchaseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.PropPackPurchasePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Races.BossUI" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Races.RaceUI" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RatioEnabler" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Removables.RemovablePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.InstaTowerGroupMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.InstaTowersMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.PowersMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.RoguePowerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.StandardInstaTowerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.StandardInstaTowerGroupButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.StandardPowerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.RightMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.ShopMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.ShopMenuGamepadNav" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.BossRushLivesDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.CashDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.CorvusSoulBarrierDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.FrontierStaminaHelperMessage" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.GameMessageManager" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.HealthDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.HelperMessage" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.LoanDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.MaxMonkeysHelperMessage" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.MonkeyMoney" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.RoundDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.Stats.ShieldDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.AreaLayerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.CancelPurchaseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.ConfirmPurchaseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.FrontierStaminaBar" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.PathLayerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.PropLayerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.RemoveableAreaLayerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.SpecialPropLayerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StampLayerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StandardAreaTextureButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StandardEditorPowerPurchaseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StandardEditorTowerPurchaseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StandardMapTextureButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StandardPropPurchaseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StandardStampPurchaseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.StandardTrackTextureButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.TabToggle" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.TowerPurchaseButton2D" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.TowerPurchaseButton3D" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.TowerPurchaseButtonFrontier" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.TowerPurchaseButtonFrontierSheriff" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.StoreMenu.TowerPurchaseButtonRogue" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.AbilityButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.BaseUpgrade" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.CorvusSpellbookSpellUi" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.CorvusSpellbookUi" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.CurrentUpgrade" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.FrontierTraitsPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.GeraldoShopMenuItemUi" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.GeraldoShopMenuUi" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.PowerProCurrentUpgrade" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.PowerProUpgradeButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.PowerProUpgradeObject" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.PowersProTierObject" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.StackedAbilityButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TierObject" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMenuThemeManager" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMenuThemes.TSMButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMenuThemes.TSMThemeDefault" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.UpgradeButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.UpgradeInfoPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.UpgradeObject" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGameObjects" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Knowledge.KnowledgeMain" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Knowledge.KnowledgeSkillBtn" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Knowledge.KnowledgeSkillTree" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Legends.FogOfWarInfluence" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Legends.FrontierSheriffCosmeticManager" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Legends.FrontierTraitDisplayPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Legends.RogueArtifactDisplayIcon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.LevelUp.LevelUpScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.LevelUp.TowerUnlockScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.LevelUp.UnlockTowerButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Lightbox" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.LiNKSocial.LinkFriendScoresPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.LiNKSocial.LinkFriendsScoresPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Mailbox.GiftLetter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Mailbox.MailboxLetter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Mailbox.MailboxScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Mailbox.MailLetterPopupWithLoot" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.DailyRewards.DailyRewardItem" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.DailyRewards.DailyRewardsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.DailyRewards.TowerGiftBoxScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.DifficultySelect.DifficultySelectScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.EventPanel.MainMenuEventPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.EventPanel.MainMenuMaintenancePanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.Facebook.FriendLoginButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.HeroSelect.CommonForegroundExtraSettings" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.HeroSelect.CommonForegroundScreenHeroButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.HeroSelect.HeroButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.HeroSelect.HeroSkinButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.HeroSelect.HeroUpgradeButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.HeroSelect.HeroUpgradeDetails" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.HeroSelect.NewHeroScreenNotification" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.Home.CoopButtonChecker" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.Home.HomeAchievementsButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.Home.KnowledgeEnabledChecker" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.Home.LegendsButtonController" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.Home.PipEventChecker" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.Mailbox.MailboxButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MainMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MapSelect.MapButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MapSelect.MapDifficultyLockFillBar" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MapSelect.MapPip" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MapSelect.MapSelectScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MapSelect.MonkeyTeamsIcon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MapSelect.NewMapChecker" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MapSelect.SeenMapChecker" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.ModeSelect.ModeButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.ModeSelect.ModeScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MonkeySelect.MonkeyButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MonkeySelect.MonkeyGroupButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MonkeySelect.MonkeySelectMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.MonkeySelect.NewTowerUnlockPip" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PlayerInfo.PlayerInfo" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.InstaTowerDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.InstaTowerScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.InstaTowerTypeDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.PowerSelectButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.PowersIAPButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.PowersSelectScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.InteractionChecker" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.OpenChest" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.OpenGameEventsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.OpenGiftbox" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.PlayInteractableAudio" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.PlayInteractableClip" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.PlayInteractableEffect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.QuestMonkey" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.WorldItems.QuestMonkeyGroup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.MainHudLeftAlign" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.MainHudRightAlign" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.MapInfoPane" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.MouseOverShowHideObj" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Nexus.NexusSettingsButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.NexusPlayerCreatorPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyBoatInteractable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyBoatLoadoutEditor" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyBoatLoadoutPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyBoatSlot" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyCompletedPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyCrewDetailsPanelPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyEventScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyExtendedLootPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyInGameRulesScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyIntroPanelPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyIslandInfoPanelPopup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyIslandInteractable" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyMapPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyPowerDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyTowerDisplay" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyWorldMenu" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Pause.PauseScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PauseButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PlayerStats.AvatarItem" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PlayerStats.BannerItem" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PlayerStats.Btd6PlayerStatPair" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PlayerStats.NamedMonkeyPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PlayerStats.OnMouseOverMessage" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PlayerStats.PlayerStatsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.PlayerStats.TowerStatIcon" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Popups.HintPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Popups.Popup" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Popups.PopupScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Quests.QuestBrowserScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Quests.QuestPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Quests.QuestPartButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Quests.QuestScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Quests.QuestSingleEventScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Quests.TaskPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.CollectionRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.EventRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.GenericRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.HeroRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.InstaMonkeyRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.InstaRankRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.PowerRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.RewardsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.SocialSeasonPerkRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Rewards.TrophyStoreRewardPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.AccessibleRangeCircle" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.AccessibleRangeCircles" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.AmbientMapEffects" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.HotkeysScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.HotkeysScreenField" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.LanguageSelectButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.LanguageSelectScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.NotificationSetting" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.NotificationsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.ScreenSizeDropDown" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.ScreenSizeDropDownSelection" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.SettingsScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Settings.SliderPercentText" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.ShaderUI.OdysseyShaderController" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.SlideshowInfoPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.SocialSeasons.SocialSeasonsGlobalGoalPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.SocialShareImage" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.StereoScaleControl" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Store.LootItem.BaseLootItemPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Store.LootPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Store.ModIconTheme" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Store.Purchaser" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Store.TowerProductButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Transitions.MapSelectTransition" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.TrophyStore.TrophyItemPanel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.TrophyStore.TrophyStoreFilterButton" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.TrophyStore.TrophyStoreScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Tutorial.InGameTutorial" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Tutorial.TutorialScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.UI" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Upgrade.SelectedUpgrade" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Upgrade.UpgradeDetails" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Upgrade.UpgradeScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.AnimationStateEvents" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.ButtonWithSyncingState" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.EnableIfBadActor" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.InGameMapRect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.InGameUIRect" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.RatioCanvasScaler" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.RegisterCameraWithCommonBackgroundScreen" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.RegisterCameraWithStereoscope" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.SafeArea" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.StereoscopeOverrides" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.UIDragHandler" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.DynamicFontReplacer" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.GameObjectEvents" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.InvertCanvasScale" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.Scrollable3DElement" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.ScrollableElement" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.Scroller3D" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.ScrollRectWithDragCancel" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.Utils.SharedMaterialFloatAccessor" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.VisionOS.BoundedInputManager" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.VisionOS.BoundedObjectBehavior" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.VisionOS.CullCanvas" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.VisionOS.ObjectVolumeLimiter" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.VisionOS.VisionOSFlippedImage" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.VisionOS.VisionOSInputHelper" preserve="all" />
+    <type fullname="Assets.Scripts.Unity.VisionOS.VisionOSObjectSwap" preserve="all" />
+    <type fullname="Assets.Scripts.Utils.CoopInvitationListener" preserve="all" />
+    <type fullname="Assets.Scripts.Utils.OnlineProfileUpdater" preserve="all" />
+    <type fullname="Assets.Scripts.Utils.RatioFovSetter" preserve="all" />
+    <type fullname="Assets.Scripts.Utils.TurnOffComponentOnRelease" preserve="all" />
+    <type fullname="Assets.Scripts.Utils.TurnOffIfReplaysNotEnabled" preserve="all" />
+    <type fullname="Assets.Scripts.Utils.TurnOffOnPlatform" preserve="all" />
+    <type fullname="Assets.Scripts.Utils.TurnOffOnRelease" preserve="all" />
+    <type fullname="AudioPreviewModule" preserve="all" />
+    <type fullname="ClockTimeAnimator" preserve="all" />
+    <type fullname="ContinueGamePanel" preserve="all" />
+    <type fullname="CustomColorAnimator" preserve="all" />
+    <type fullname="CustomFlyoverAnimator" preserve="all" />
+    <type fullname="CustomMoveAnimator" preserve="all" />
+    <type fullname="CustomRendererToggleAnimator" preserve="all" />
+    <type fullname="CustomRotationAnimator" preserve="all" />
+    <type fullname="CustomRotationSimple" preserve="all" />
+    <type fullname="CustomScaleAnimator" preserve="all" />
+    <type fullname="DestroyComponent" preserve="all" />
+    <type fullname="DifficultyCollectionEventItemLabel" preserve="all" />
+    <type fullname="DifficultyCollectionEventItems" preserve="all" />
+    <type fullname="DifficultySelectMmItems" preserve="all" />
+    <type fullname="DigitalClockFaceAnimator" preserve="all" />
+    <type fullname="EditorTrackItem" preserve="all" />
+    <type fullname="FXVolumeControl" preserve="all" />
+    <type fullname="GameObjectEnabler" preserve="all" />
+    <type fullname="GestureSystem.TouchableObject" preserve="all" />
+    <type fullname="IncludeMeshInBake" preserve="all" />
+    <type fullname="LegendsUIAudio" preserve="all" />
+    <type fullname="MapSelectDisplay" preserve="all" />
+    <type fullname="ModeCollectionEventItemLabel" preserve="all" />
+    <type fullname="ModeCollectionEventItems" preserve="all" />
+    <type fullname="ModeSelectMonkeyMoneyLabel" preserve="all" />
+    <type fullname="MusicVolumeControl" preserve="all" />
+    <type fullname="NestedPrefab" preserve="all" />
+    <type fullname="NK_TextMeshProInputField" preserve="all" />
+    <type fullname="OnClickHandler" preserve="all" />
+    <type fullname="PetSoundToggleControl" preserve="all" />
+    <type fullname="PlayAnimationOnClick" preserve="all" />
+    <type fullname="PlayAnimationToEnd" preserve="all" />
+    <type fullname="PlayEffectOnClick" preserve="all" />
+    <type fullname="PlaySoundOnDrag" preserve="all" />
+    <type fullname="PlaySoundOnMapInteractableClick" preserve="all" />
+    <type fullname="PowerImageLoader" preserve="all" />
+    <type fullname="RogueGameModeRules" preserve="all" />
+    <type fullname="RogueMiniGameScoreDisplay" preserve="all" />
+    <type fullname="RotateDisplayModel" preserve="all" />
+    <type fullname="RotateModelAction" preserve="all" />
+    <type fullname="RotateObjectOnClick" preserve="all" />
+    <type fullname="SetActiveCallback" preserve="all" />
+    <type fullname="SetOpenAnimationDuringRound" preserve="all" />
+    <type fullname="SocialSeasonsEndGameUI" preserve="all" />
+    <type fullname="SpinUpDisplayModel" preserve="all" />
+    <type fullname="ToggleImageSwap" preserve="all" />
+    <type fullname="TowerContainerSpritesAsset" preserve="all" />
+    <type fullname="TowerImageLoader" preserve="all" />
+    <type fullname="TowerUnlockSelectionPanel" preserve="all" />
+    <type fullname="TrackItem" preserve="all" />
+    <type fullname="TwitchSettingsButton" preserve="all" />
+    <type fullname="UnityEngine.UI.Extensions.NonDrawingGraphic" preserve="all" />
+    <type fullname="UnityEngine.UI.SolidShadow" preserve="all" />
+    <type fullname="UpgradePopup" preserve="all" />
+    <type fullname="Assets.Scripts.Simulation.SMath.Circle" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Simulation.SMath.Vector3" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Map.PolygonArea/PointArray" preserve="nothing" serialized="true" />
+    <type fullname="RangeValue" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Simulation.Display.Mesh" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.AnimationBakerStateConfig" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.AnimationBakerVariantStateConfig" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.EditorMenu/AreaEditingPanel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.EditorMenus.EditorMenu/PathEditingPanel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Utils.TouchGesture/GestureSettings" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.AnimCurves.AnimCurveContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.AnimCurves.AnimCurveData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.AnimatedCharacters.DialogueAudioData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.BTD6AssetFlags" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.BloonPopupData/BloonPopupDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.BloonPopupData/BloonPopupDataInfo" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonDisplayScriptable/BloonDamageState" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonDisplayScriptable/BloonKindDisplay" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Bloons.BloonImmuneSoundScriptable/BloonImmuneSound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Boss.BossData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Boss.BossDetailsContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Boss.BossType" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Boss.OverrideBackgroundContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Boss.OverrideScreenBackground" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Boss.ScreenBackground" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Boss.ScreenBackgroundContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.DecorativeTile" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.DecorativeTiles" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.ExtraAssets" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.IslandTheme" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.MapGeneration" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.MapSizing" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.PlaceableAsset" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.TeamDetail" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.TeamsStoreFlairData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ContestedTerritory.TileData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.AnimationSwap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.AudioSwap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.BloonDecals.BloonDecalSwap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.PrefabArraySwap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.PrefabSwap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.Props.Prop/OffsetDictionary" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Cosmetics.SpriteSwap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Gameplay.BloonGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Gameplay.FreeplayGroupDataItem" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Gameplay.IncomeSet/Container" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Gameplay.RoundData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Gameplay.RoundInfo" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Global.BuffIconSprite" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Global.Rank" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Global.SpriteRefList" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Input.GamepadData/Remap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Input.GamepadInputType" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Abilitized" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.AirAndSea" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.AlchemistTouch" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.BiggerBloonSabotage" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.BoxOfChocolates" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.BoxOfMonkey" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.BrokenHeart" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.CamoTrap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Camoflogged" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.DeepHeat" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.DurableShots" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.ElDorado" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.ExtraEmpowered" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.FlintTips" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Fortifried" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.GlueTrap" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.GoingTheDistance" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.HardBaked" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Heartless" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.HeroBoost" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.ManaBulwark" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.MarchingBoots" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.MoabClash" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.MoabMine" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.MonkeyBoost" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.MonkeyShieldMarkOne" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.MonkeyShieldMarkThree" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.MonkeyShieldMarkTwo" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.OpenSeason" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.PsiVision" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Regeneration" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Restoration" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.RoadSpikes" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.RoundingUp" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.RoyalTreatment" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Sharpsplosion" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.StartingStash" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.StoreOnlyMagicMonkeys" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.StoreOnlyMilitaryMonkeys" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.StoreOnlyMonkeyTycoon" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.StoreOnlyPrimaryPrimates" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.StoreOnlySupportSimians" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.SuperMonkeyStorm" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.TechBot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Knowledge.RelicKnowledge.Thrive" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Languages.DynamicFontReferences/FontReferenceDict" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.AbandonMonkeyEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.AddMonkeyEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.AddRandomTemporaryTraitEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.AddRandomTraitEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.AddTemporaryTraitEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.ChangeCurrencyEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.ChangeStaminaEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.CompleteLevelsLegendsQuestTask" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.DeleteMonkeyEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.DestroyBlockersCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.DestroyBloonCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.DialogueCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.DoNothingEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FadeToBlackCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FindLostMonkeyEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FishingDifficulty" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FocusOnFlagCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FocusOnPlayerCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierBloonData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierBloonRushData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierBloonSpawnerFlagData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierCampaignBloonSettings" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierCampaignGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierCampaignInfo" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierChest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierCurrencyLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierCustomDifficultyCategory" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierCustomDifficultyOption" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierEncounterNPCData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierEncounterOption" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierEncounterOutcome" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierEventData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierFakeWalletLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierFishTierChances" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierFishWeightSpeedModifiers" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierHeroSkinData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierInstaLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierInstaMonkey" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierItemArtifactLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierKey" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierKeyLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierLevelData/FrontierLevelModifiers" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierMapArtifactLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierMapTemplateReference" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierModifiersModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierNavigationFlagData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierPowerLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierSaloonTowerLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierSetLootChest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierSheriffBadgeLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierSheriffItem" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierSheriffItemLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierStoreLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierTileSpeedData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.FrontierWeightedLoot" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.GiveLootEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.GoToFlagLegendsQuestTask" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.GoToNPCLegendsQuestTask" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsNPCData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsNPCQuestStepData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsPropGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsPropVariant" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsQuestStep" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsTileBaseGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsTileGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsType" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.LegendsWaterfallData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.MoveBloonCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.MoveNPCCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.MovePlayerCutsceneBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.QuestNPCData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RemoveRandomTraitEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RepeatableLevelLegendsQuestTask" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RerollTraitsEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueFinalBossInfo" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueHeroStarterKit" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueInstaMonkey" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueMapTemplateReference" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RoguePropGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueTileAssetCategory" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.RogueTileAssetData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.StaminaTraitData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.TraitData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Legends.UpgradeDiscountEncounterBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.MapSets.MapDetails" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.MapSets.MapDetailsContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ModeData.ModeData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.ModeData.ModesData/ModeDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.DialogueContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.DialogueData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.DialogueDataQuest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.DialogueDataTaskContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.InGame.DialogueInGameIntroduction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.InGame.DialogueInGameOnBloonPop" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.InGame.DialogueInGameOnBloonSpawned" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.InGame.DialogueInGameOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.InGame.DialogueInGameOnTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.InGame.DialogueInGameTowerUpgradedToTier" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.Legends.FrontierQuestInfo" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.Legends.RogueQuestInfo" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.LootData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestBehaviors.DialogueDisableableAfterVictoryQuest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestBehaviors.HeroTrialQuest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestBehaviors.ShowStoreIapButton" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestBehaviors.SpecialEventLootSetRewardableQuest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestBehaviors.SpotlightedQuest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestDialogueAnimData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestPartData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.QuestPartDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.RewardsContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TaskBehaviorContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TaskBehaviors.ChallengeGoal" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TaskBehaviors.FrontierGoal" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TaskBehaviors.RetryLastRoundAllowedBehavior" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TaskBehaviors.RogueGoal" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TaskBehaviors.SpawnBossEvent" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TowerQuestContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.TutorialQuestData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.UI.DialogueFullQuestCompleted" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.UI.DialogueShowOnNextUiMenu" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.UI.DialogueTaskCompleted" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.UI.DialogueTaskIntroduction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Quests.UI.DialogueTaskOnDefeat" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.RangeCircleTextrueGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.PortraitContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SkinContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.StorePortraits" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapAudio" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapAudioContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapOverlay" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapOverlayContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapPrefab" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapPrefabContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapProjectileSpriteGroup" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapProjectileSpriteGroupContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapShopPortrait" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapShopPortraitContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapShopProjectilePrefab" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapShopProjectilePrefabContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapShopSprite" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapShopSpriteContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapSprite" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Skins.SwapSpriteContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.SocialSeasons.SeasonPerkModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Store.LootThemeItem" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Store.StoreItem/Epic" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Store.StoreItem/SwitchEShop" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Sweepstakes.StatEventData/StatEventBannerTheme" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Sweepstakes.StatEventData/StatEventDataItem" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Sweepstakes.StatEventData/StatEventDetailsContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Sweepstakes.StatEventData/StatEventThemeContainer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.TrophyStore.TrophyItemTypeData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.TrophyStore.TrophyStoreTypeIcon" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AbilityStackingBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddBanAmountBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddCampfireRecruitsModifierModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddControlledZoneBehaviorsArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddDisplayArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddEndOfRoundRerollBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddMerchantDiscountsModifierModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddMonkeyMoneyBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddProjectileBehaviorsArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddRewardChoiceBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddRogueBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddRogueXpBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddTowerBehaviorsArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AddWeaponBehaviorsArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AllowMonkeyFleeingBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.ArtifactDamageModifierIncludeDotsModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AttackSpeedArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.AttackSpeedTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.BlockSellingTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.BloonHealthBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.BloonSpeedBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.BoostRerollCostModifierModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.CashLossOnGameOverBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.CatsMeowBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.CooldownBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.CountAllCategoriesBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DamageBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DamageImmunityModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DamageTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DeputyBadgeBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DisableAttackArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DisableCampfireHealingBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DisableChipAwayBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.DiscountBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.EssenceOfLychBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FollowMeBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierEncounterRollIncreaseTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierFishSpeedModifierBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierFishingRodUpgradeBehaviourModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierGainLivesOnWinBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierGoldIncreaseBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierGoldIncreaseModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierHomesteadIncreaseBehaviour" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierInvisibleToWanderingBloonsModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierMovementAnimModifierModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierMovementSpeedBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierQuickDrawTargetSizeModifier" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierRecruitAmountUpgradeBehaviourModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierReducedPlacementStaminaModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierSaloonDiscountModifierBehaviourModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.FrontierVictoryCashRewardBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.GamblerTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.GeneralStoreCostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.GiveCritChanceBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.GlobalTechBotLinkBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.GluesplosionBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.HeroEndOfRoundXpScaleBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.HeroXpPerBloonLayerBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.InstaCooldownBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.InvokeBoostBuffBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.MaxLivePercentIncreaseBehaviourModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.MinigameCashBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.MinigameStaminaBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.NegativeTraitChanceBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.PassiveStaminaRegenBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.PermaDeathBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.PierceBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.PierceTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.PopsFiredBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.ProjectileCarouselBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.ProjectileLifespanBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.ProjectileSizeTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.ProjectileSpeedBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.ProjectileSpeedTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.RangeBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.RangeTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.RateBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.RemoveArtifactAfterEndOfGameRerollBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.RemoveArtifactIfNoTowerBanAmountBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.SaloonRefreshCostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.SetMaxLivesBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.SheriffDetectionDelayBoostBehaviourModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.SheriffMoraleBoostBehaviourModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.SpreadBoostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.SpreadTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.StaminaCostReductionBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.StunTowerTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.TiredTraitDifficultyBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.TowerEffectTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.TowerSizeTraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.Behaviors.TowerUpgradeCostBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.BoostArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.FrontierMapArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.ItemArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.MapArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.StaminaTraitArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Artifacts.TraitArtifactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.Actions.DashForwardsActionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.AddHeatActionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.BlastapopoulosRushBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.BloonariusRushBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.CapReceivedDamageModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.CreateEffectOnPopModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.CreateSoundOnDamageBloonModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.DamageOverTimeCustomModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.DiamondbackRushBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.DreadbloonRushBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.DynamiteBloonBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.GrowBlockModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.IncreaseDamageFromTypeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.LychRushBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.OnDamagedTriggerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.PhayzeRushBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.PlayAnimTriggerActionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.QuickEntryModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.SetInvulnerableActionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.SetPositionActionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.SetSpeedPercentActionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.SlowTowersOnPopModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.WaitForSecondsActionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.Behaviors.ZombieBloonBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Bloons.BloonVariantModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Condition.TowerHasStaminaModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.MapEditorAreaData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.MapEditorPathData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.MapEditorPowerData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.MapEditorPropData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.MapEditorStampData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.MapEditorTowerData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.PathNode" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContentBrowser.PositionalData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ContestedTerritory.CtIncreasedProjectileLifespanModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Effects.EffectModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.AllBloonSpeedModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.BloonHealthModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.BloonHealthModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.BonusCashPerRoundModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.ChimpsModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.DeflationModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.DisableContinueModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.DisableMonkeyKnowledgeModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.DisableSellTowerModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.EndRoundModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.GlobalCostModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.GlobalSpeedModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.ImpoppableModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.IncomeSetModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.LockTowerModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.LockTowerSetModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.MaxHealthModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.ModifyAllCashModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.ModifyPopCashModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.ModifyRoundCashModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.ModifyTowerCashModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.MonkeyMoneyModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.RemoveManaShieldModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.ReverseModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.RoundSetModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.SellMultiplierModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.SetHealthForBloonModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.SimTowerDiscountModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.StartingCashModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.StartingHealthModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Gameplay.Mods.StartingRoundModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.GenericBehaviors.DisplayModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.ArtifactLimitXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.BanMapDifficultyXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.BanSellingXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.BloonSpeedXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.BoostDiscountXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.BoostRerollDiscountXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.DisableBoostsXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.DisableBronzeGoalXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.DisableHeroesXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.DisableRerollsXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.DisableStartingArtifactsXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.DisableXpShopXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.FinalBossHpXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.HeroXpXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.InstaCooldownXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.LegendaryTilesXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.LivesXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MapHeartsXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MaxLivesXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MerchantLegendaryChanceXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MerchantPricesXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MerchantRareChanceXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MiniBossScoreRequirementXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MiniGameScoreRequirementXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.MuatorModXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.PartySizeXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.RecruitRerollsXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.RewardChoiceAmountXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.StartingArtifactsXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.StartingCashXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.TokenXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.TowerCashScaleXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.UpgradeDiscountXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Legends.XpShopMods.UpgradeIncreaseXpShopMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Map.AreaData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Map.RemovableAreaData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.MapEditorBehaviors.EditorLayerBehaviors.MapEditorLayerBehaviorsMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Perks.Mods.AddProjectileBehaviorsPerkModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Perks.Mods.AddSimBehaviorToSimModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Perks.Mods.AddTowerBehaviorsPerkModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Perks.Mods.AddWeaponBehaviorsPerkModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Perks.Mods.MakeTowerModModelGlobalModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Perks.Mods.RemovableCostMultiplierModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Profile.AccessibilitySettings/RangeCircleMode" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Rounds.FreeplayBloonGroupModel/Bounds" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Rounds.RoundThresholdMultiplier" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.ServerEvents.CashModifiers" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.SimulationBehaviors.AddBonusDegreeToPlacedParagonModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.SimulationBehaviors.AddTowerBehaviorSimBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.SimulationBehaviors.AddTowerBehaviorToFirstPlacedTowerSimBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.SimulationBehaviors.Mods.HeroXPBonusModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.SimulationBehaviors.SimulationBehaviorsMod" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.TowerSets.TowerSet" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Abilities.AbilityModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.ActivateAttackModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Abilities.Behaviors.CreateEffectOnAbilityModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.AbilityCooldownScaleModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.AbilityCooldownScaleSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.AbilityOverchargeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Attack.AttackModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.CloseTargetTrackModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.RotateToPointerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetPointerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Attack.Behaviors.TargetTrackModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.ControlledDamageModifierZoneModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.ControlledDamageTypeZoneModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.ControlledSlowZoneModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.CreateEffectAfterTimeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.CreateEffectOnExpireModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.CreateNearbyWaterModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.CreateProjectileOnTowerDestroyModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.CreateSoundOnTowerExpireModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.DamageBasedAttackSpeedModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.DamageModifierSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.DamageTypeSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Emissions.ArcEmissionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Emissions.EmissionAtClosestPathSegmentModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Emissions.EmissionAtLastPathSegmentModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionAtTowerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.Emissions.SingleEmissionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.FreezeDurationSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.FreezeNearbyWaterModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.GainSheriffMoraleOnBloonDestroyedModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.GainShieldPerRoundModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.HeroesWrathModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.JuggernautModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.LinkDisplayScaleToTowerRangeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.OverrideCamoDetectionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.ProjectileLifespanSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.ProjectileSpeedSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.RandomTeleportInRangeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.RangeSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.RateSupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.SheriffAutoGiddyUpModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.SlowBloonsZoneModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.StartOfRoundRateBuffModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.StunImmunitySupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.TowerCreateProjectileOnProjectileExhaustModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.VisibilitySupportModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.WeaponReloadPercentageOnTargetPrioModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.WindyZoneModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Filters.FilterInvisibleModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Filters.FilterMoabModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Filters.FilterWithTagModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.AddBehaviorsToBloonModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.AddOverlayToBloonModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.AddSlowImmunityToBloonModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.BouncingDartsModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.DamageModifierForTagModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.HeroXpInjectionModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.ProjectilePierceModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.ProjectileSpeedModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.RangeModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.SpreadPercentageModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.TierFiveCountModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.TowerSellModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.WeaponReloadPercentageModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.AddBehaviorToBloonModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.AddBonusDamagePerHitToBloonModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.AdoraTrackTargetModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.AgeRandomModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.ClearHitBloonsWhenNoLongerCollidingModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnContactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateEffectOnExhaustFractionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateSoundOnProjectileCollisionModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.CreateTextEffectModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForBloonStateModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForModifiersModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForRoundModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierForTagModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.DamageModifierWrathModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.DestroyProjectileIfTowerDestroyedModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.EatBloonModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.FreezeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.FrontierGiveRewardsOnHitChanceModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.IncreaseBloonWorthModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.InstantModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.KnockbackModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.MapBorderReboundModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileBlockerCollisionReboundModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileFilterModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.ProjectileZeroRotationModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.PushBackModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveBloonModifiersModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.RemoveDamageTypeModifierModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.RetargetOnContactModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.RotateModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowMaimMoabModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModel/SlowMutator" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowModifierForTagModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.SlowOnPopModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.TrackTargetModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.TrackTargetOrOrbitTowerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelAlongPathModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelCurvyModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.TravelStraitSlowdownModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.WindModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.Behaviors.ZigZagModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Projectiles.ProjectileModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.TowerFilters.FilterInSetModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.TowerFilters.FilterSubTowerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.BloonsInRangeAttackSpeedModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.BurstWeaponBehaviorModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.CreateProjectileAfterProjectilesCreatedModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.CreateSoundOnProjectileCreatedModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.CritRollModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.CritRollWithDistanceModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.LeakDangerAttackSpeedModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.LimitProjectileModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.RandomAngleOffsetModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.RandomRateModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.Behaviors.RandomSpeedOffsetModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Weapons.WeaponModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.BroadcastSignalAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.CreateHandDragObjectAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.CreatePlacementCircleAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.DestroyBloonsAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.GainCashAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.LoseCashAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.LoseLivesAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.ManageMainHudAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.ManageShopPanelAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.ManageTowerUpgradesPanelAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.PlayMovieClipAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.RemoveAllHandDragObjectsAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.RemoveAllPlacementCirclesAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.SelectPlacedTowerAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.SendBloonAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.ShowDialogueAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.ShowGlowOnTowerButtonAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.StartRoundAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.ToggleMapEditorLayer" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.ToggleTowerUpgradeScreenAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Actions.TriggerEventHooksAction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.HookCondition" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnBloonDestroyedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnBloonLeakedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnBloonPoppedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnCloseSceneTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnMatchReadyTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnPlacementCircleInteraction" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnRecieveSignalTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnRoundEndedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnRoundStartedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnTimePassedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnTowerPlacedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnTowerUpgradeUnlockedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Behaviors.Events.Triggers.OnTowerUpgradedTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.MapEditor.EditorLayerBehaviors.DisablePropsOnLayerOnLoad" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.AbilityRefreshOnTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.ActivateAbilitiesOnTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.AddArtifactToSimulation" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.AddEventHook" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.AddMapAssetsEvent" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.AnniversaryChallengeQuest" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.AwardCashOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.BossRushManager" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.CashRushGameMode" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.DisallowTowersUntilOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.EnduranceRaceMode" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.FastUpgradesGameMode" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.FrontierQuestMode" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.HighlightAbilitiesOnTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.PropSpawningChallenge" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.RefreshHeroCooldownsOnRoundEnd" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.RemovePropsOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.RemoveRemoveablesOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.RogueQuestMode" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.SetHeroLevelOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.SpawnBloonsOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.SpawnPowerAtLocation" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.SpawnPropOnRoundOrTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.SpawnTowerOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.SwitchMusicTrackTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.ToggleAbilityCooldownOnTrigger" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.TrackBloonDistanceTraveledOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.TriggerBehaviorsOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.TriggerDialogueOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.TriggerGameModeBehaviors" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.TriggerVictoryOnBossDefeat" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.SimulationBehaviors.UpgradeTowerOnRound" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Towers.Pets.PetCreateEffectOnPlace" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Towers.Pets.PetCreateEffectOnSell" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Towers.Pets.PetCreateSoundOnIdle" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Towers.Pets.PetCreateSoundOnPlace" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Towers.Pets.Wander" preserve="nothing" serialized="true" />
+    <type fullname="BloonOverlayClass" preserve="nothing" serialized="true" />
+    <type fullname="BloonProperties" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/BloonHealthMultipliersData" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/BloonModifiersData" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/EditorPowerData" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/EditorTowerData" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorAreaAssets" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorAreaDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorPathAssets" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorPathDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorPowerAssets" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorPowerDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorPropAssets" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorPropDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorStampAssets" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorStampDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorTowerAssets" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/MapEditorTowerDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/PowerDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/PowerList" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/StartRulesData" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/TowerDataContainer" preserve="nothing" serialized="true" />
+    <type fullname="DailyChallengeData/TowerList" preserve="nothing" serialized="true" />
+    <type fullname="RogueGameModeRules/RogueModeGenericRules" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Map.Spawners.BloonTagSplitter/PathTagPair" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Data.ScorePanelUI" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Odyssey.OdysseyWorldConfig" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.WorldInteractables.WorldConfig" preserve="nothing" serialized="true" />
+    <type fullname="TowerSetBgSprites" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Upgrades.UpgradeModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Upgrade.UpgradeDetails/UpgradeDetailsTheme" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.TrophyStore.TrophyStoreScreen/TrophyStoreFilterData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.ConsolePlayerMenu/PlayerTheme" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.ControlPadPlayerMenuTabs" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.InGame/InGameMenuDef" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Cursor/CursorSprites" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Powers.PowerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Behaviors.FootprintModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.TowerModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Upgrades.UpgradePathModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.PowersIAPButton/PowersIAPData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Main.PowersSelect.PowersSelectScreen/PowerThemeData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Quests.QuestBrowserScreen/TabButton" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Achievements.AchievementTheme" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Data.Languages.LanguageAsset/LanguageDict" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Display.Animation.FrameOverrideData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.GeraldoItems.GeraldoItemModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Models.Towers.Mods.AmbushTechModModel" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Cascade.CascadingBool" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Cascade.CascadingFloat" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.Gamepad.SpringConfig" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.MenuThemeManager/ThemeDictionary" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.RightMenu.Powers.PowersMenu/GamepadPowersMenuLayout" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.RadialConfig" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMenu/AdvancedStatData" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.InGame.TowerSelectionMenu.TowerSelectionMenu/AdvancedStats" preserve="nothing" serialized="true" />
+    <type fullname="Assets.Scripts.Unity.UI_New.Legends.FrontierSheriffCosmeticManager/SerializableSlotObjects" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="NinjaKiwi.Common, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="NinjaKiwi.Common.ResourceUtils.SpriteReleaser" preserve="all" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.PrefabReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.AudioClipReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.SpriteReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.AnimationClipReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.AssetLibrary`1/Entry" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.AssetLibrary`1/Group" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.AssetType" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.MaterialReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.ScriptableObjectReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.SpriteShapeReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.TMP_FontAssetReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.TextAssetReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.ResourceUtils.TextureReference" preserve="nothing" serialized="true" />
+    <type fullname="NinjaKiwi.Common.SerializableDictionary`2" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="NinjaKiwi.Localization, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="NK_TextMeshPro" preserve="all" />
+    <type fullname="NK_TextMeshProUGUI" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.2D.SpriteShape.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.U2D.SpriteShape" preserve="all" />
+    <type fullname="UnityEngine.U2D.SpriteShapeController" preserve="all" />
+    <type fullname="UnityEngine.U2D.AngleRange" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.CornerSprite" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.Spline" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.U2D.SplineControlPoint" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Unity.Addressables, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.AddressableAssets.Addressables" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Rendering.Universal.UniversalAdditionalCameraData" preserve="all" />
+    <type fullname="UnityEngine.Rendering.Universal.TemporalAA/Settings" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="Unity.ResourceManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null" preserve="all">
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AssetBundleProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.AtlasSpriteProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.BundledAssetProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.InstanceProvider" preserve="all" />
+    <type fullname="UnityEngine.ResourceManagement.ResourceProviders.SceneProvider" preserve="all" />
+  </assembly>
+  <assembly fullname="Unity.TextMeshPro, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="TMPro.TMP_Dropdown" preserve="all" />
+    <type fullname="TMPro.TMP_FontAsset" preserve="all" />
+    <type fullname="TMPro.FaceInfo_Legacy" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.FontAssetCreationSettings" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.KerningTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_Character" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontFeatureTable" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_FontWeightPair" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.VertexGradient" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_Dropdown/DropdownEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_Dropdown/OptionDataList" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/OnChangeEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/SubmitEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TextSelectionEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_InputField/TouchScreenKeyboardEvent" preserve="nothing" serialized="true" />
+    <type fullname="TMPro.TMP_Dropdown/OptionData" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEditor.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEditor.Audio.AudioMixerSnapshotController" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Animation" preserve="all" />
+    <type fullname="UnityEngine.AnimationClip" preserve="all" />
+    <type fullname="UnityEngine.Animator" preserve="all" />
+    <type fullname="UnityEngine.AnimatorOverrideController" preserve="all" />
+    <type fullname="UnityEngine.Avatar" preserve="all" />
+    <type fullname="UnityEngine.RuntimeAnimatorController" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Audio.AudioMixer" preserve="all" />
+    <type fullname="UnityEngine.Audio.AudioMixerGroup" preserve="all" />
+    <type fullname="UnityEngine.AudioClip" preserve="all" />
+    <type fullname="UnityEngine.AudioListener" preserve="all" />
+    <type fullname="UnityEngine.AudioSource" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Camera" preserve="all" />
+    <type fullname="UnityEngine.Cubemap" preserve="all" />
+    <type fullname="UnityEngine.GameObject" preserve="all" />
+    <type fullname="UnityEngine.Light" preserve="all" />
+    <type fullname="UnityEngine.LightmapSettings" preserve="all" />
+    <type fullname="UnityEngine.LineRenderer" preserve="all" />
+    <type fullname="UnityEngine.Material" preserve="all" />
+    <type fullname="UnityEngine.Mesh" preserve="all" />
+    <type fullname="UnityEngine.MeshFilter" preserve="all" />
+    <type fullname="UnityEngine.MeshRenderer" preserve="all" />
+    <type fullname="UnityEngine.MonoBehaviour" preserve="all" />
+    <type fullname="UnityEngine.Object" preserve="all" />
+    <type fullname="UnityEngine.RectTransform" preserve="all" />
+    <type fullname="UnityEngine.Rendering.SortingGroup" preserve="all" />
+    <type fullname="UnityEngine.RenderSettings" preserve="all" />
+    <type fullname="UnityEngine.Shader" preserve="all" />
+    <type fullname="UnityEngine.SkinnedMeshRenderer" preserve="all" />
+    <type fullname="UnityEngine.Sprite" preserve="all" />
+    <type fullname="UnityEngine.SpriteRenderer" preserve="all" />
+    <type fullname="UnityEngine.TextAsset" preserve="all" />
+    <type fullname="UnityEngine.Texture2D" preserve="all" />
+    <type fullname="UnityEngine.TrailRenderer" preserve="all" />
+    <type fullname="UnityEngine.Transform" preserve="all" />
+    <type fullname="UnityEngine.U2D.SpriteAtlas" preserve="all" />
+    <type fullname="UnityEngine.Events.PersistentCallGroup" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.ArgumentCache" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.PersistentListenerMode" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.RectOffset" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.Events.UnityEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.ParticleSystemModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.ParticleSystem" preserve="all" />
+    <type fullname="UnityEngine.ParticleSystemRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.PhysicsModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.BoxCollider" preserve="all" />
+    <type fullname="UnityEngine.MeshCollider" preserve="all" />
+    <type fullname="UnityEngine.Rigidbody" preserve="all" />
+    <type fullname="UnityEngine.SphereCollider" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.SpriteShapeModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.U2D.SpriteShapeRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextRenderingModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Font" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.UI, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.EventSystems.EventTrigger" preserve="all" />
+    <type fullname="UnityEngine.UI.Button" preserve="all" />
+    <type fullname="UnityEngine.UI.CanvasScaler" preserve="all" />
+    <type fullname="UnityEngine.UI.ContentSizeFitter" preserve="all" />
+    <type fullname="UnityEngine.UI.GraphicRaycaster" preserve="all" />
+    <type fullname="UnityEngine.UI.GridLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.HorizontalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.Image" preserve="all" />
+    <type fullname="UnityEngine.UI.LayoutElement" preserve="all" />
+    <type fullname="UnityEngine.UI.Mask" preserve="all" />
+    <type fullname="UnityEngine.UI.RawImage" preserve="all" />
+    <type fullname="UnityEngine.UI.RectMask2D" preserve="all" />
+    <type fullname="UnityEngine.UI.Scrollbar" preserve="all" />
+    <type fullname="UnityEngine.UI.ScrollRect" preserve="all" />
+    <type fullname="UnityEngine.UI.Slider" preserve="all" />
+    <type fullname="UnityEngine.UI.Toggle" preserve="all" />
+    <type fullname="UnityEngine.UI.ToggleGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.VerticalLayoutGroup" preserve="all" />
+    <type fullname="UnityEngine.UI.MaskableGraphic/CullStateChangedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.AnimationTriggers" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Button/ButtonClickedEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ColorBlock" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Navigation" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.SpriteState" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.ScrollRect/ScrollRectEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Slider/SliderEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Toggle/ToggleEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.UI.Scrollbar/ScrollEvent" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.EventSystems.EventTrigger/Entry" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.EventSystems.EventTrigger/TriggerEvent" preserve="nothing" serialized="true" />
+  </assembly>
+  <assembly fullname="UnityEngine.UIModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.Canvas" preserve="all" />
+    <type fullname="UnityEngine.CanvasGroup" preserve="all" />
+    <type fullname="UnityEngine.CanvasRenderer" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.WindModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null">
+    <type fullname="UnityEngine.WindZone" preserve="all" />
+  </assembly>
+  <assembly fullname="UnityEngine.TextCoreFontEngineModule">
+    <type fullname="UnityEngine.TextCore.FaceInfo" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.Glyph" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.GlyphMetrics" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.GlyphRect" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.LowLevel.GlyphAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.LowLevel.GlyphPairAdjustmentRecord" preserve="nothing" serialized="true" />
+    <type fullname="UnityEngine.TextCore.LowLevel.GlyphValueRecord" preserve="nothing" serialized="true" />
+  </assembly>
+</linker>

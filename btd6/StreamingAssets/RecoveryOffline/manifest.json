@@ -1,0 +1,51 @@
+{
+  "selection": {
+    "appId": 11,
+    "skuId": 35,
+    "build": "56.3",
+    "branch": {
+      "branch": "56.3",
+      "buildName": "56.3",
+      "name": "56.3",
+      "status": "live"
+    },
+    "filename": "c001d66a3ca237b5ac942e92b72af694.json",
+    "url": "https://static-api.nkstatic.com/nkapi/skusettings/c001d66a3ca237b5ac942e92b72af694.json",
+    "branchSignatureVerified": true,
+    "nativeRvas": [
+      "13198b0",
+      "4898b0",
+      "46f7f0",
+      "2b34b60",
+      "2b347a0",
+      "2b5c290"
+    ]
+  },
+  "files": [
+    {
+      "encoding": "DGDATA",
+      "checksum": "1cb58302",
+      "checksumVerified": true,
+      "name": "UpdateSettings",
+      "sha256": "2d1bc130d2101484cc52e4089639345ca84c7e51827f5f072bcbfacfbf28df7b",
+      "size": 1696
+    },
+    {
+      "encoding": "UTF-8",
+      "signatureVerified": true,
+      "name": "skuBranch",
+      "sha256": "744cb0bb29b72273ee8d16c9bbcf0df2a1b942f9fec496245f3c1d0e9ba55e36",
+      "size": 4515
+    },
+    {
+      "encoding": "DGDATA",
+      "checksum": "e8abceff",
+      "checksumVerified": true,
+      "signatureVerified": true,
+      "name": "Sku",
+      "sha256": "b893574fb0978066dcc1885e6d853b5808f84abdbaeed852ee32cef343bb072e",
+      "size": 1281678
+    }
+  ],
+  "scope": "Offline configuration snapshot only; complete game startup remains under recovery."
+}
